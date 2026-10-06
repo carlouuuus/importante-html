@@ -1,4 +1,5 @@
-```html
+
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -15,7 +16,7 @@
 
 <nav class="navbar navbar-expand-lg fixed-top navbar-pingui">
 <div class="container">
-<a class="navbar-brand d-flex align-items-center" href="#">
+<a class="navbar-brand d-flex align-items-center" href="#" data-page="0">
 <img src="./assets/logo-pingui.png" alt="Pingui Store" class="logo-pingui">
 </a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -27,6 +28,11 @@
 <li class="nav-item"><a class="nav-link" data-page="1" href="#">Tienda</a></li>
 <li class="nav-item"><a class="nav-link" data-page="2" href="#">Categorías</a></li>
 <li class="nav-item"><a class="nav-link" data-page="3" href="#">Sobre nosotros</a></li>
+<li class="nav-item"><a class="nav-link" data-page="4" href="#">JavaScript</a></li>
+<li class="nav-item"><a class="nav-link" data-page="5" href="#">jQuery</a></li>
+<li class="nav-item"><a class="nav-link" data-page="6" href="#">JSON</a></li>
+<li class="nav-item"><a class="nav-link" data-page="7" href="#">Hosting</a></li>
+<li class="nav-item"><a class="nav-link" data-page="8" href="#">Cuestionario</a></li>
 </ul>
 </div>
 <div class="navbar-actions d-none d-lg-flex align-items-center gap-2">
@@ -49,7 +55,7 @@
 <div class="col-lg-6 hero-text">
 <h1>Tu tienda de<br><span>productos pingüinos</span> 💙</h1>
 <p>Ternura, estilo y mucho pingüinito en un solo lugar.</p>
-<a href="#" class="btn btn-pingui">Ver productos <i class="bi bi-arrow-right"></i></a>
+<a href="#" class="btn btn-pingui" data-page="1">Ver productos <i class="bi bi-arrow-right"></i></a>
 </div>
 <div class="col-lg-6 text-center">
 <img src="./assets/logo-pinguino.png" class="img-fluid hero-penguin" alt="Pingüino Pingui Store">
@@ -229,6 +235,274 @@
 </div>
 </section>
 
+<section class="page info-section" data-page="4">
+<div class="container">
+<div class="info-box">
+<div class="section-heading">
+<span></span>
+<h2>JavaScript (JS Vanilla) 💻</h2>
+<span></span>
+</div>
+<p>JavaScript es un lenguaje de programación utilizado para agregar interactividad y comportamiento a las páginas web. En Pingui Store permite crear botones, menús, efectos y acciones interactivas.</p>
+
+<h3>HTML, CSS y JavaScript</h3>
+<div class="row g-3">
+<div class="col-md-4">
+<div class="tech-card">
+<h4>HTML</h4>
+<p>Proporciona la estructura de la página web.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="tech-card">
+<h4>CSS</h4>
+<p>Controla los colores, tamaños, fuentes y diseño.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="tech-card">
+<h4>JavaScript</h4>
+<p>Agrega comportamiento e interacción.</p>
+</div>
+</div>
+</div>
+
+<h3>Conceptos básicos</h3>
+<p><strong>Variables:</strong> almacenan información como el nombre o precio de un producto.</p>
+<p><strong>Funciones:</strong> contienen instrucciones que pueden ejecutarse cuando sea necesario.</p>
+<p><strong>Eventos:</strong> permiten responder a acciones del usuario, como hacer clic en un botón.</p>
+
+<h3>Ejemplo práctico</h3>
+<pre><code>let producto = "Peluche Pingüino";
+
+function mostrarProducto() {
+    alert("Has seleccionado: " + producto);
+}</code></pre>
+
+<button class="btn btn-pingui" onclick="mostrarProducto()">Ver ejemplo 🐧</button>
+</div>
+</div>
+</section>
+
+<section class="page info-section" data-page="5">
+<div class="container">
+<div class="info-box">
+<div class="section-heading">
+<span></span>
+<h2>jQuery 💙</h2>
+<span></span>
+</div>
+
+<p>jQuery es una biblioteca de JavaScript creada para simplificar la programación de páginas web. Facilita tareas como seleccionar elementos, modificar contenido y crear animaciones.</p>
+
+<h3>Sintaxis básica</h3>
+<pre><code>$("#producto")</code></pre>
+<p>El símbolo <strong>$</strong> se utiliza para seleccionar elementos y trabajar con ellos de una manera sencilla.</p>
+
+<h3>Ventajas y desventajas</h3>
+<div class="row g-3">
+<div class="col-md-6">
+<div class="tech-card">
+<h4>✓ Ventajas</h4>
+<p>Su sintaxis es sencilla y facilita la creación de efectos y animaciones.</p>
+</div>
+</div>
+<div class="col-md-6">
+<div class="tech-card">
+<h4>✗ Desventajas</h4>
+<p>Actualmente muchas funciones pueden realizarse directamente con JavaScript moderno.</p>
+</div>
+</div>
+</div>
+
+<h3>Efectos típicos</h3>
+<pre><code>$("#producto").fadeIn();
+$("#menu").slideToggle();</code></pre>
+
+<div id="jquery-producto" class="tech-demo">
+<h4>🐧 Peluche Pingüino</h4>
+<p>¡Producto disponible en Pingui Store!</p>
+</div>
+
+<button class="btn btn-pingui" onclick="efectoJquery()">Mostrar / Ocultar</button>
+</div>
+</div>
+</section>
+
+<section class="page info-section" data-page="6">
+<div class="container">
+<div class="info-box">
+<div class="section-heading">
+<span></span>
+<h2>JSON 🗂️</h2>
+<span></span>
+</div>
+
+<p>JSON significa JavaScript Object Notation. Es un formato utilizado para almacenar y transmitir información entre aplicaciones y servidores.</p>
+
+<h3>Estructura básica</h3>
+<p>JSON utiliza pares de clave y valor, objetos y arreglos para organizar los datos.</p>
+
+<pre><code>{
+  "nombre": "Peluche Pingüino",
+  "precio": 15.99,
+  "categoria": "Peluches",
+  "disponible": true
+}</code></pre>
+
+<h3>Objeto JavaScript</h3>
+<pre><code>const producto = {
+  nombre: "Peluche Pingüino",
+  precio: 15.99
+};</code></pre>
+
+<h3>Cadena JSON</h3>
+<pre><code>'{"nombre":"Peluche Pingüino","precio":15.99}'</code></pre>
+
+<h3>Uso en aplicaciones web</h3>
+<p>Las aplicaciones web utilizan JSON para enviar y recibir información de servidores o APIs. Por ejemplo, Pingui Store podría recibir mediante JSON los nombres, precios y disponibilidad de sus productos.</p>
+</div>
+</div>
+</section>
+
+<section class="page info-section" data-page="7">
+<div class="container">
+<div class="info-box">
+<div class="section-heading">
+<span></span>
+<h2>Web Hosting y Dominios 🌐</h2>
+<span></span>
+</div>
+
+<p>Para que Pingui Store pueda estar disponible en Internet, sus archivos deben almacenarse en un servidor mediante un servicio de hosting.</p>
+
+<h3>¿Qué es Web Hosting?</h3>
+<p>El web hosting es un servicio que permite almacenar los archivos de un sitio web en un servidor conectado a Internet.</p>
+
+<h3>Tipos de Hosting</h3>
+<div class="row g-3">
+<div class="col-md-4">
+<div class="tech-card">
+<h4>Compartido</h4>
+<p>Varios sitios utilizan los recursos de un mismo servidor.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="tech-card">
+<h4>VPS</h4>
+<p>Proporciona recursos más independientes dentro de un servidor.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="tech-card">
+<h4>Nube</h4>
+<p>Utiliza diferentes servidores conectados para ofrecer flexibilidad.</p>
+</div>
+</div>
+</div>
+
+<h3>Vercel</h3>
+<p>Vercel es una plataforma que permite publicar sitios web, especialmente proyectos estáticos y aplicaciones modernas. Pingui Store puede colocar sus archivos HTML, CSS y JavaScript en Vercel para hacerlos accesibles desde Internet.</p>
+
+<h3>¿Qué es un dominio?</h3>
+<p>Un dominio es el nombre que las personas utilizan para acceder a un sitio web, por ejemplo: <strong>pinguistore.com</strong>.</p>
+
+<h3>TLD</h3>
+<p>El TLD es la terminación de un dominio. Algunos ejemplos son <strong>.com</strong>, <strong>.net</strong> y <strong>.org</strong>.</p>
+
+<h3>Subdominio</h3>
+<p>Un subdominio es una sección independiente dentro de un dominio, por ejemplo: <strong>tienda.pinguistore.com</strong>.</p>
+
+<h3>Propagación DNS</h3>
+<div class="dns-flow">
+<div>🐧<strong>Usuario</strong></div>
+<i class="bi bi-arrow-right"></i>
+<div>🌐<strong>Dominio</strong></div>
+<i class="bi bi-arrow-right"></i>
+<div>🔎<strong>DNS</strong></div>
+<i class="bi bi-arrow-right"></i>
+<div>🖥️<strong>Hosting</strong></div>
+<i class="bi bi-arrow-right"></i>
+<div>🛍️<strong>Pingui Store</strong></div>
+</div>
+
+<p>La propagación DNS es el proceso mediante el cual los cambios realizados en los registros DNS se actualizan y son reconocidos por diferentes servidores de Internet.</p>
+</div>
+</div>
+</section>
+
+<section class="page info-section" data-page="8">
+<div class="container">
+<div class="info-box">
+<div class="section-heading">
+<span></span>
+<h2>Cuestionario Web 📝</h2>
+<span></span>
+</div>
+
+<p>Comprueba cuánto aprendiste sobre las tecnologías utilizadas en Pingui Store.</p>
+
+<form id="quiz">
+
+<h3>1. ¿Qué lenguaje agrega comportamiento e interactividad?</h3>
+<label><input type="radio" name="p1" value="a"> HTML</label>
+<label><input type="radio" name="p1" value="b"> CSS</label>
+<label><input type="radio" name="p1" value="c"> JavaScript</label>
+
+<h3>2. ¿Qué símbolo se utiliza normalmente en jQuery?</h3>
+<label><input type="radio" name="p2" value="a"> #</label>
+<label><input type="radio" name="p2" value="b"> $</label>
+<label><input type="radio" name="p2" value="c"> @</label>
+
+<h3>3. ¿Para qué se utiliza principalmente JSON?</h3>
+<label><input type="radio" name="p3" value="a"> Para intercambiar datos</label>
+<label><input type="radio" name="p3" value="b"> Para crear imágenes</label>
+<label><input type="radio" name="p3" value="c"> Para diseñar páginas</label>
+
+<h3>4. ¿Qué es un dominio?</h3>
+<label><input type="radio" name="p4" value="a"> Un nombre que identifica un sitio web</label>
+<label><input type="radio" name="p4" value="b"> Una imagen</label>
+<label><input type="radio" name="p4" value="c"> Un lenguaje</label>
+
+<h3>5. ¿Cuál es un ejemplo de TLD?</h3>
+<label><input type="radio" name="p5" value="a"> .html</label>
+<label><input type="radio" name="p5" value="b"> .com</label>
+<label><input type="radio" name="p5" value="c"> .js</label>
+
+<h3>6. ¿Qué permite hacer el hosting?</h3>
+<label><input type="radio" name="p6" value="a"> Almacenar los archivos de un sitio web</label>
+<label><input type="radio" name="p6" value="b"> Crear dibujos</label>
+<label><input type="radio" name="p6" value="c"> Cambiar el teclado</label>
+
+<h3>7. ¿Qué biblioteca facilita el uso de JavaScript?</h3>
+<label><input type="radio" name="p7" value="a"> JSON</label>
+<label><input type="radio" name="p7" value="b"> jQuery</label>
+<label><input type="radio" name="p7" value="c"> HTML</label>
+
+<h3>8. ¿Cuál es una ventaja de jQuery?</h3>
+<label><input type="radio" name="p8" value="a"> Facilita efectos y animaciones</label>
+<label><input type="radio" name="p8" value="b"> Reemplaza el hosting</label>
+<label><input type="radio" name="p8" value="c"> Crea dominios automáticamente</label>
+
+<h3>9. ¿Qué representa un par clave-valor en JSON?</h3>
+<label><input type="radio" name="p9" value="a"> Información organizada</label>
+<label><input type="radio" name="p9" value="b"> Una imagen</label>
+<label><input type="radio" name="p9" value="c"> Un servidor</label>
+
+<h3>10. ¿Qué servicio puede utilizarse para publicar un sitio web?</h3>
+<label><input type="radio" name="p10" value="a"> Vercel</label>
+<label><input type="radio" name="p10" value="b"> JSON</label>
+<label><input type="radio" name="p10" value="c"> CSS</label>
+
+<br><br>
+<button type="button" class="btn btn-pingui" onclick="calificar()">Comprobar respuestas</button>
+</form>
+
+<div id="resultado"></div>
+</div>
+</div>
+</section>
+
 </main>
 
 <footer class="footer-pingui">
@@ -246,10 +520,10 @@
 
 <div class="col-lg-4 mb-3 mb-lg-0">
 <h6>ENLACES RÁPIDOS</h6>
-<a href="#">Inicio</a>
-<a href="#">Tienda</a>
-<a href="#">Categorías</a>
-<a href="#">Sobre nosotros</a>
+<a href="#" data-page="0">Inicio</a>
+<a href="#" data-page="1">Tienda</a>
+<a href="#" data-page="2">Categorías</a>
+<a href="#" data-page="3">Sobre nosotros</a>
 </div>
 
 <div class="col-lg-3 text-lg-end">
@@ -265,6 +539,37 @@
 </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+function mostrarProducto(){
+alert("Has seleccionado: Peluche Pingüino 🐧");
+}
+
+function efectoJquery(){
+$("#jquery-producto").slideToggle();
+}
+
+function calificar(){
+let respuestas=["c","b","a","a","b","a","b","a","a","a"];
+let puntos=0;
+for(let i=1;i<=10;i++){
+let respuesta=document.querySelector('input[name="p'+i+'"]:checked');
+if(respuesta&&respuesta.value===respuestas[i-1]) puntos++;
+}
+let mensaje="";
+if(puntos>=9){
+mensaje="¡Excelente! 🐧✨ Dominas estos temas.";
+}else if(puntos>=7){
+mensaje="¡Muy bien! 🐧💙 Solo necesitas repasar algunos conceptos.";
+}else if(puntos>=5){
+mensaje="Bien, pero puedes seguir estudiando. 🐧📚";
+}else{
+mensaje="Necesitas repasar las páginas informativas. 🐧💡";
+}
+document.getElementById("resultado").innerHTML="<h3>Resultado: "+puntos+"/10</h3><p>"+mensaje+"</p>";
+}
+</script>
+
 </body>
 </html>
-```
