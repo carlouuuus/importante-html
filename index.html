@@ -558,6 +558,62 @@
             background: #09131b
         }
 
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 25px;
+            align-items: start
+        }
+
+        .contact-card {
+            background: var(--blanco);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: var(--sombra);
+            height: 100%
+        }
+
+        .contact-icon {
+            width: 65px;
+            height: 65px;
+            background: var(--azul-claro);
+            color: var(--azul);
+            border-radius: 18px;
+            display: grid;
+            place-items: center;
+            font-size: 30px;
+            margin-bottom: 18px
+        }
+
+        .contact-form .form-control {
+            border-radius: 12px;
+            padding: 12px;
+            border: 1px solid #cbd9e5;
+            background: var(--fondo);
+            color: var(--texto)
+        }
+
+        .contact-form .form-control:focus {
+            border-color: var(--azul);
+            box-shadow: 0 0 0 .2rem rgba(23, 105, 170, .15)
+        }
+
+        .contact-form textarea {
+            resize: vertical
+        }
+
+        #contactStatus {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: 600
+        }
+
+        .dark-mode .contact-form .form-control {
+            border-color: #435361
+        }
+
         @media(max-width:991px) {
             .navbar-nav {
                 padding: 12px 0
@@ -573,6 +629,12 @@
 
             .shipping-box img {
                 display: none
+            }
+        }
+
+        @media(max-width:767px) {
+            .contact-grid {
+                grid-template-columns: 1fr
             }
         }
 
@@ -602,15 +664,12 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg fixed-top navbar-pingui">
         <div class="container">
-            <a class="navbar-brand" href="#" data-page="0">
-                <img src="./assets/logo-pinguino.png" alt="Pingui Store" class="logo-pingui">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="#" data-page="0"><img src="./assets/logo-pinguino.png" alt="Pingui Store"
+                    class="logo-pingui"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><span
+                    class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse justify-content-center" id="menu">
                 <ul class="navbar-nav gap-lg-2">
                     <li class="nav-item"><a class="nav-link active" href="#" data-page="0">Inicio</a></li>
@@ -623,109 +682,94 @@
                     <li class="nav-item"><a class="nav-link" href="#" data-page="7">Hosting</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" data-page="8">Cuestionario</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" data-page="9">Google</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-page="10">Contacto</a></li>
                 </ul>
             </div>
             <div class="d-flex align-items-center gap-2">
-                <div class="search-box d-none d-xl-flex">
-                    <i class="bi bi-search me-2"></i>
-                    <input type="text" placeholder="Buscar productos...">
-                </div>
+                <div class="search-box d-none d-xl-flex"><i class="bi bi-search me-2"></i><input type="text"
+                        placeholder="Buscar productos..."></div>
                 <button id="themeToggle" class="theme-btn" title="Cambiar tema"><i class="bi bi-moon"></i></button>
                 <a href="#" class="nav-icon d-none d-lg-block"><i class="bi bi-person"></i></a>
                 <a href="#" class="nav-icon cart-icon d-none d-lg-block"><i class="bi bi-cart3"></i><span>0</span></a>
             </div>
         </div>
     </nav>
-
     <main>
-
         <section class="page active hero-section" data-page="0">
             <div class="container">
                 <div class="hero-box">
                     <div class="row align-items-center">
                         <div class="col-lg-6 hero-text">
                             <h1>Tu tienda de<br><span>productos pingüinos</span> 💙</h1>
-                            <p>Ternura, estilo y mucho pingüinito en un solo lugar.</p>
-                            <a href="#" class="btn btn-pingui" data-page="1">Ver productos <i
-                                    class="bi bi-arrow-right"></i></a>
+                            <p>Ternura, estilo y mucho pingüinito en un solo lugar.</p><a href="#"
+                                class="btn btn-pingui" data-page="1">Ver productos <i class="bi bi-arrow-right"></i></a>
                         </div>
-                        <div class="col-lg-6 text-center">
-                            <img src="./assets/logo-pinguino.png" class="img-fluid hero-penguin"
-                                alt="Pingüino Pingui Store">
-                        </div>
+                        <div class="col-lg-6 text-center"><img src="./assets/logo-pinguino.png"
+                                class="img-fluid hero-penguin" alt="Pingüino Pingui Store"></div>
                     </div>
                 </div>
             </div>
         </section>
-
         <section class="page products-section" data-page="1">
             <div class="container">
                 <div class="section-heading"><span></span>
                     <h2>Productos destacados</h2><span></span>
                 </div>
                 <div class="row g-3">
-
                     <div class="col-md-6 col-lg">
                         <div class="product-card">
                             <div class="product-image"><img src="./assets/productos/peluche.png"
-                                    alt="Peluche Pingüino"><button class="favorite"><i class="bi bi-heart"></i></button>
-                            </div>
-                            <h5>Peluche Pingüino</h5><strong>$12.99</strong>
-                            <button class="btn btn-cart"><i class="bi bi-cart3"></i> Agregar al carrito</button>
+                                    alt="Peluche Pingüino"><button class="favorite" aria-label="Añadir a favoritos"><i
+                                        class="bi bi-heart"></i></button></div>
+                            <h5>Peluche Pingüino</h5><strong>$12.99</strong><button class="btn btn-cart"><i
+                                    class="bi bi-cart3"></i> Agregar al carrito</button>
                         </div>
                     </div>
-
                     <div class="col-md-6 col-lg">
                         <div class="product-card">
                             <div class="product-image"><img src="./assets/productos/taza.png"
-                                    alt="Taza Pingüino"><button class="favorite"><i class="bi bi-heart"></i></button>
-                            </div>
-                            <h5>Taza Pingüino</h5><strong>$8.99</strong>
-                            <button class="btn btn-cart"><i class="bi bi-cart3"></i> Agregar al carrito</button>
+                                    alt="Taza Pingüino"><button class="favorite" aria-label="Añadir a favoritos"><i
+                                        class="bi bi-heart"></i></button></div>
+                            <h5>Taza Pingüino</h5><strong>$8.99</strong><button class="btn btn-cart"><i
+                                    class="bi bi-cart3"></i> Agregar al carrito</button>
                         </div>
                     </div>
-
                     <div class="col-md-6 col-lg">
                         <div class="product-card">
                             <div class="product-image"><img src="./assets/productos/mochila.png"
-                                    alt="Mochila Pingüino"><button class="favorite"><i class="bi bi-heart"></i></button>
-                            </div>
-                            <h5>Mochila Pingüino</h5><strong>$24.99</strong>
-                            <button class="btn btn-cart"><i class="bi bi-cart3"></i> Agregar al carrito</button>
+                                    alt="Mochila Pingüino"><button class="favorite" aria-label="Añadir a favoritos"><i
+                                        class="bi bi-heart"></i></button></div>
+                            <h5>Mochila Pingüino</h5><strong>$24.99</strong><button class="btn btn-cart"><i
+                                    class="bi bi-cart3"></i> Agregar al carrito</button>
                         </div>
                     </div>
-
                     <div class="col-md-6 col-lg">
                         <div class="product-card">
                             <div class="product-image"><img src="./assets/productos/llavero-pinguino.png"
-                                    alt="Llavero Pingüino"><button class="favorite"><i class="bi bi-heart"></i></button>
-                            </div>
-                            <h5>Llavero Pingüino</h5><strong>$6.99</strong>
-                            <button class="btn btn-cart"><i class="bi bi-cart3"></i> Agregar al carrito</button>
+                                    alt="Llavero Pingüino"><button class="favorite" aria-label="Añadir a favoritos"><i
+                                        class="bi bi-heart"></i></button></div>
+                            <h5>Llavero Pingüino</h5><strong>$6.99</strong><button class="btn btn-cart"><i
+                                    class="bi bi-cart3"></i> Agregar al carrito</button>
                         </div>
                     </div>
-
                     <div class="col-md-6 col-lg">
                         <div class="product-card">
                             <div class="product-image"><img src="./assets/productos/corazon.png"
-                                    alt="Peluche Corazón"><button class="favorite"><i class="bi bi-heart"></i></button>
-                            </div>
-                            <h5>Peluche Corazón</h5><strong>$14.99</strong>
-                            <button class="btn btn-cart"><i class="bi bi-cart3"></i> Agregar al carrito</button>
+                                    alt="Peluche Corazón"><button class="favorite" aria-label="Añadir a favoritos"><i
+                                        class="bi bi-heart"></i></button></div>
+                            <h5>Peluche Corazón</h5><strong>$14.99</strong><button class="btn btn-cart"><i
+                                    class="bi bi-cart3"></i> Agregar al carrito</button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-
         <section class="page products-section" data-page="2">
             <div class="container">
                 <div class="section-heading"><span></span>
                     <h2>Categorías</h2><span></span>
                 </div>
                 <div class="row justify-content-center g-3">
-
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="category-card">
                             <div class="category-circle blue"><img src="./assets/categorias/peluche.png" alt="Peluches">
@@ -767,20 +811,18 @@
                             <h5>Ropa</h5>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-
         <section class="page about-section" data-page="3">
             <div class="container">
                 <div class="about-box">
                     <div class="row align-items-center">
                         <div class="col-lg-7">
-                            <h2>Sobre nosotros </h2>
+                            <h2>Sobre nosotros</h2>
                             <p>En Pingui Store nos encanta crear y ofrecer productos inspirados en los pingüinos.</p>
-                            <p>Nuestro objetivo es llevar ternura, diversión y estilo a cada producto.</p>
-                            <a href="#" class="btn btn-pingui" data-page="1">Conoce nuestra tienda</a>
+                            <p>Nuestro objetivo es llevar ternura, diversión y estilo a cada producto.</p><a href="#"
+                                class="btn btn-pingui" data-page="1">Conoce nuestra tienda</a>
                         </div>
                         <div class="col-lg-5 text-center"><img src="./assets/abouth-pinguino.png"
                                 class="img-fluid about-penguin" alt="Pingüino"></div>
@@ -788,7 +830,6 @@
                 </div>
             </div>
         </section>
-
         <section class="shipping-section">
             <div class="container">
                 <div class="shipping-box">
@@ -796,17 +837,15 @@
                     <div>
                         <h2>Envíos a todo el país</h2>
                         <p>Lleva la ternura a donde quieras.</p>
-                    </div>
-                    <img src="./assets/abouth-pinguino.png" alt="Pingüino con corazón">
+                    </div><img src="./assets/abouth-pinguino.png" alt="Pingüino con corazón">
                 </div>
             </div>
         </section>
-
         <section class="page info-section" data-page="4">
             <div class="container">
                 <div class="info-box">
                     <div class="section-heading"><span></span>
-                        <h2>JavaScript </h2><span></span>
+                        <h2>JavaScript</h2><span></span>
                     </div>
                     <p>JavaScript es un lenguaje de programación utilizado para agregar interactividad y comportamiento
                         a las páginas web. En Pingui Store puede utilizarse para botones, menús, carritos, efectos y
@@ -837,20 +876,18 @@
                     <p><strong>Eventos:</strong> responden a acciones como hacer clic.</p>
                     <h3>Ejemplo</h3>
                     <pre><code>let producto = "Peluche Pingüino";
-
 function mostrarProducto() {
     alert("Has seleccionado: " + producto);
 }</code></pre>
-                    <button class="btn btn-pingui" onclick="mostrarProducto()">Probar JavaScript </button>
+                    <button class="btn btn-pingui" onclick="mostrarProducto()">Probar JavaScript</button>
                 </div>
             </div>
         </section>
-
         <section class="page info-section" data-page="5">
             <div class="container">
                 <div class="info-box">
                     <div class="section-heading"><span></span>
-                        <h2>jQuery </h2><span></span>
+                        <h2>jQuery</h2><span></span>
                     </div>
                     <p>jQuery es una biblioteca de JavaScript creada para simplificar tareas frecuentes del desarrollo
                         web, como seleccionar elementos, modificar contenido y crear efectos.</p>
@@ -874,19 +911,17 @@ $("#menu").slideToggle()</code></pre>
                     </div>
                     <h3>Ejemplo de animación</h3>
                     <div id="jquery-producto" class="tech-demo">
-                        <h4> Peluche Pingüino</h4>
+                        <h4>Peluche Pingüino</h4>
                         <p>¡Producto disponible!</p>
-                    </div>
-                    <button class="btn btn-pingui" onclick="efectoJquery()">Mostrar / Ocultar</button>
+                    </div><button class="btn btn-pingui" onclick="efectoJquery()">Mostrar / Ocultar</button>
                 </div>
             </div>
         </section>
-
         <section class="page info-section" data-page="6">
             <div class="container">
                 <div class="info-box">
                     <div class="section-heading"><span></span>
-                        <h2>JSON </h2><span></span>
+                        <h2>JSON</h2><span></span>
                     </div>
                     <p>JSON significa JavaScript Object Notation. Es un formato utilizado para almacenar y transmitir
                         datos entre aplicaciones y servidores.</p>
@@ -907,12 +942,11 @@ $("#menu").slideToggle()</code></pre>
                 </div>
             </div>
         </section>
-
         <section class="page info-section" data-page="7">
             <div class="container">
                 <div class="info-box">
                     <div class="section-heading"><span></span>
-                        <h2>Web Hosting y Dominios </h2><span></span>
+                        <h2>Web Hosting y Dominios</h2><span></span>
                     </div>
                     <p>El hosting permite almacenar los archivos de un sitio web en servidores conectados a Internet.
                     </p>
@@ -938,19 +972,17 @@ $("#menu").slideToggle()</code></pre>
                     </div>
                     <h3>Dominios</h3>
                     <p>Un dominio es el nombre utilizado para acceder a un sitio web. Ejemplo:
-                        <strong>pinguistore.com</strong>.
-                    </p>
+                        <strong>pinguistore.com</strong>.</p>
                     <p>Un TLD es la terminación como <strong>.com</strong>, <strong>.net</strong> u
-                        <strong>.org</strong>.
-                    </p>
+                        <strong>.org</strong>.</p>
                     <p>Un subdominio puede ser <strong>tienda.pinguistore.com</strong>.</p>
                     <h3>Propagación DNS</h3>
                     <div class="dns-flow">
-                        <div><br><strong>Usuario</strong></div><i class="bi bi-arrow-right"></i>
-                        <div><br><strong>Dominio</strong></div><i class="bi bi-arrow-right"></i>
-                        <div><br><strong>DNS</strong></div><i class="bi bi-arrow-right"></i>
-                        <div><br><strong>Hosting</strong></div><i class="bi bi-arrow-right"></i>
-                        <div><br><strong>Pingui Store</strong></div>
+                        <div><strong>Usuario</strong></div><i class="bi bi-arrow-right"></i>
+                        <div><strong>Dominio</strong></div><i class="bi bi-arrow-right"></i>
+                        <div><strong>DNS</strong></div><i class="bi bi-arrow-right"></i>
+                        <div><strong>Hosting</strong></div><i class="bi bi-arrow-right"></i>
+                        <div><strong>Pingui Store</strong></div>
                     </div>
                 </div>
             </div>
@@ -959,69 +991,62 @@ $("#menu").slideToggle()</code></pre>
             <div class="container">
                 <div class="info-box">
                     <div class="section-heading"><span></span>
-                        <h2>Cuestionario Web </h2><span></span>
+                        <h2>Cuestionario Web</h2><span></span>
                     </div>
                     <p>Comprueba lo aprendido en las investigaciones anteriores.</p>
                     <form id="quiz">
                         <div class="quiz-question">
-                            <h3>1. ¿Qué lenguaje agrega comportamiento a una página web?</h3>
-                            <label><input type="radio" name="p1" value="a"> HTML</label>
-                            <label><input type="radio" name="p1" value="b"> CSS</label>
-                            <label><input type="radio" name="p1" value="c"> JavaScript</label>
+                            <h3>1. ¿Qué lenguaje agrega comportamiento a una página web?</h3><label><input type="radio"
+                                    name="p1" value="a"> HTML</label><label><input type="radio" name="p1" value="b">
+                                CSS</label><label><input type="radio" name="p1" value="c"> JavaScript</label>
                         </div>
                         <div class="quiz-question">
-                            <h3>2. ¿Qué símbolo utiliza normalmente jQuery?</h3>
-                            <label><input type="radio" name="p2" value="a"> #</label>
-                            <label><input type="radio" name="p2" value="b"> $</label>
-                            <label><input type="radio" name="p2" value="c"> @</label>
+                            <h3>2. ¿Qué símbolo utiliza normalmente jQuery?</h3><label><input type="radio" name="p2"
+                                    value="a"> #</label><label><input type="radio" name="p2" value="b">
+                                $</label><label><input type="radio" name="p2" value="c"> @</label>
                         </div>
                         <div class="quiz-question">
-                            <h3>3. ¿Para qué se utiliza JSON?</h3>
-                            <label><input type="radio" name="p3" value="a"> Intercambiar datos</label>
-                            <label><input type="radio" name="p3" value="b"> Crear imágenes</label>
-                            <label><input type="radio" name="p3" value="c"> Diseñar páginas</label>
+                            <h3>3. ¿Para qué se utiliza JSON?</h3><label><input type="radio" name="p3" value="a">
+                                Intercambiar datos</label><label><input type="radio" name="p3" value="b"> Crear
+                                imágenes</label><label><input type="radio" name="p3" value="c"> Diseñar páginas</label>
                         </div>
                         <div class="quiz-question">
-                            <h3>4. ¿Qué es un dominio?</h3>
-                            <label><input type="radio" name="p4" value="a"> Nombre que identifica un sitio</label>
-                            <label><input type="radio" name="p4" value="b"> Una imagen</label>
-                            <label><input type="radio" name="p4" value="c"> Un lenguaje</label>
+                            <h3>4. ¿Qué es un dominio?</h3><label><input type="radio" name="p4" value="a"> Nombre que
+                                identifica un sitio</label><label><input type="radio" name="p4" value="b"> Una
+                                imagen</label><label><input type="radio" name="p4" value="c"> Un lenguaje</label>
                         </div>
                         <div class="quiz-question">
-                            <h3>5. ¿Cuál es un TLD?</h3>
-                            <label><input type="radio" name="p5" value="a"> .html</label>
-                            <label><input type="radio" name="p5" value="b"> .com</label>
-                            <label><input type="radio" name="p5" value="c"> .js</label>
+                            <h3>5. ¿Cuál es un TLD?</h3><label><input type="radio" name="p5" value="a">
+                                .html</label><label><input type="radio" name="p5" value="b"> .com</label><label><input
+                                    type="radio" name="p5" value="c"> .js</label>
                         </div>
                         <div class="quiz-question">
-                            <h3>6. ¿Qué permite hacer el hosting?</h3>
-                            <label><input type="radio" name="p6" value="a"> Almacenar archivos web</label>
-                            <label><input type="radio" name="p6" value="b"> Crear dibujos</label>
-                            <label><input type="radio" name="p6" value="c"> Cambiar el teclado</label>
+                            <h3>6. ¿Qué permite hacer el hosting?</h3><label><input type="radio" name="p6" value="a">
+                                Almacenar archivos web</label><label><input type="radio" name="p6" value="b"> Crear
+                                dibujos</label><label><input type="radio" name="p6" value="c"> Cambiar el
+                                teclado</label>
                         </div>
                         <div class="quiz-question">
-                            <h3>7. ¿Qué biblioteca facilita tareas de JavaScript?</h3>
-                            <label><input type="radio" name="p7" value="a"> JSON</label>
-                            <label><input type="radio" name="p7" value="b"> jQuery</label>
-                            <label><input type="radio" name="p7" value="c"> HTML</label>
+                            <h3>7. ¿Qué biblioteca facilita tareas de JavaScript?</h3><label><input type="radio"
+                                    name="p7" value="a"> JSON</label><label><input type="radio" name="p7" value="b">
+                                jQuery</label><label><input type="radio" name="p7" value="c"> HTML</label>
                         </div>
                         <div class="quiz-question">
-                            <h3>8. ¿Qué es Google Docs?</h3>
-                            <label><input type="radio" name="p8" value="a"> Editor de documentos</label>
-                            <label><input type="radio" name="p8" value="b"> Navegador</label>
-                            <label><input type="radio" name="p8" value="c"> Servidor</label>
+                            <h3>8. ¿Qué es Google Docs?</h3><label><input type="radio" name="p8" value="a"> Editor de
+                                documentos</label><label><input type="radio" name="p8" value="b">
+                                Navegador</label><label><input type="radio" name="p8" value="c"> Servidor</label>
                         </div>
                         <div class="quiz-question">
-                            <h3>9. ¿Qué herramienta permite crear hojas de cálculo?</h3>
-                            <label><input type="radio" name="p9" value="a"> Google Slides</label>
-                            <label><input type="radio" name="p9" value="b"> Google Sheets</label>
-                            <label><input type="radio" name="p9" value="c"> Google Meet</label>
+                            <h3>9. ¿Qué herramienta permite crear hojas de cálculo?</h3><label><input type="radio"
+                                    name="p9" value="a"> Google Slides</label><label><input type="radio" name="p9"
+                                    value="b"> Google Sheets</label><label><input type="radio" name="p9" value="c">
+                                Google Meet</label>
                         </div>
                         <div class="quiz-question">
-                            <h3>10. ¿Qué herramienta permite crear formularios y encuestas?</h3>
-                            <label><input type="radio" name="p10" value="a"> Google Forms</label>
-                            <label><input type="radio" name="p10" value="b"> Google Drive</label>
-                            <label><input type="radio" name="p10" value="c"> Google Calendar</label>
+                            <h3>10. ¿Qué herramienta permite crear formularios y encuestas?</h3><label><input
+                                    type="radio" name="p10" value="a"> Google Forms</label><label><input type="radio"
+                                    name="p10" value="b"> Google Drive</label><label><input type="radio" name="p10"
+                                    value="c"> Google Calendar</label>
                         </div>
                         <button type="button" class="btn btn-pingui" onclick="calificar()">Comprobar respuestas</button>
                     </form>
@@ -1039,75 +1064,54 @@ $("#menu").slideToggle()</code></pre>
                                 programar, crear contenido, analizar información y facilitar diferentes tareas.</p>
                             <p>En esta sección conoceremos 15 herramientas de IA de Google y su utilidad.</p>
                         </div>
-                        <div class="col-lg-4 text-center">
-                            <img src="./assets/logo-pinguino.png" class="img-fluid" style="max-height:180px"
-                                alt="Pingüino">
-                        </div>
+                        <div class="col-lg-4 text-center"><img src="./assets/logo-pinguino.png" class="img-fluid"
+                                style="max-height:180px" alt="Pingüino"></div>
                     </div>
                 </div>
-
                 <div id="googleCarousel" class="carousel slide carousel-fade mb-4" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#googleCarousel" data-bs-slide-to="0"
-                            class="active"></button>
-                        <button type="button" data-bs-target="#googleCarousel" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#googleCarousel" data-bs-slide-to="2"></button>
-                        <button type="button" data-bs-target="#googleCarousel" data-bs-slide-to="3"></button>
-                        <button type="button" data-bs-target="#googleCarousel" data-bs-slide-to="4"></button>
-                    </div>
-
+                    <div class="carousel-indicators"><button type="button" data-bs-target="#googleCarousel"
+                            data-bs-slide-to="0" class="active"></button><button type="button"
+                            data-bs-target="#googleCarousel" data-bs-slide-to="1"></button><button type="button"
+                            data-bs-target="#googleCarousel" data-bs-slide-to="2"></button><button type="button"
+                            data-bs-target="#googleCarousel" data-bs-slide-to="3"></button><button type="button"
+                            data-bs-target="#googleCarousel" data-bs-slide-to="4"></button></div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./assets/logo-pinguino.png" alt="Gemini">
+                        <div class="carousel-item active"><img src="./assets/logo-pinguino.png" alt="Gemini">
                             <div class="carousel-caption">
                                 <h3>Gemini</h3>
                                 <p>Asistente de inteligencia artificial de Google.</p>
                             </div>
                         </div>
-
-                        <div class="carousel-item">
-                            <img src="./assets/logo-pinguino.png" alt="Gemini Notebook">
+                        <div class="carousel-item"><img src="./assets/logo-pinguino.png" alt="NotebookLM">
                             <div class="carousel-caption">
-                                <h3>Gemini Notebook</h3>
+                                <h3>NotebookLM</h3>
                                 <p>Ayuda a investigar, resumir y organizar información.</p>
                             </div>
                         </div>
-
-                        <div class="carousel-item">
-                            <img src="./assets/logo-pinguino.png" alt="Google AI Studio">
+                        <div class="carousel-item"><img src="./assets/logo-pinguino.png" alt="Google AI Studio">
                             <div class="carousel-caption">
                                 <h3>Google AI Studio</h3>
                                 <p>Permite crear y probar aplicaciones con IA.</p>
                             </div>
                         </div>
-
-                        <div class="carousel-item">
-                            <img src="./assets/logo-pinguino.png" alt="Google Flow">
+                        <div class="carousel-item"><img src="./assets/logo-pinguino.png" alt="Google Flow">
                             <div class="carousel-caption">
                                 <h3>Google Flow</h3>
                                 <p>Herramienta de IA para crear contenido visual.</p>
                             </div>
                         </div>
-
-                        <div class="carousel-item">
-                            <img src="./assets/logo-pinguino.png" alt="Jules">
+                        <div class="carousel-item"><img src="./assets/logo-pinguino.png" alt="Jules">
                             <div class="carousel-caption">
                                 <h3>Jules</h3>
                                 <p>Agente de IA de Google para ayudar con programación.</p>
                             </div>
                         </div>
                     </div>
-
                     <button class="carousel-control-prev" type="button" data-bs-target="#googleCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
+                        data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
                     <button class="carousel-control-next" type="button" data-bs-target="#googleCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
+                        data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
                 </div>
-
                 <div class="row g-3">
                     <div class="col-md-4">
                         <div class="google-card">
@@ -1117,7 +1121,7 @@ $("#menu").slideToggle()</code></pre>
                     </div>
                     <div class="col-md-4">
                         <div class="google-card">
-                            <h3>2. Gemini Notebook</h3>
+                            <h3>2. NotebookLM</h3>
                             <p>Ayuda a estudiar, investigar y resumir información.</p>
                         </div>
                     </div>
@@ -1202,140 +1206,145 @@ $("#menu").slideToggle()</code></pre>
                 </div>
             </div>
         </section>
-
+        <section class="page info-section" data-page="10">
+            <div class="container">
+                <div class="info-box">
+                    <div class="section-heading"><span></span>
+                        <h2>Contacta con nosotros</h2><span></span>
+                    </div>
+                    <p class="text-center mb-4">¿Tienes alguna pregunta? Envíanos un mensaje y te responderemos lo antes
+                        posible.</p>
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="bi bi-chat-heart"></i></div>
+                            <h3>¡Hablemos!</h3>
+                            <p>En Pingui Store nos encanta ayudarte. Completa el formulario y tu mensaje llegará a
+                                nuestro equipo a través de Discord.</p>
+                            <p class="mb-2"><i class="bi bi-shield-check me-2"></i>Tus datos se envían a través de un
+                                servidor intermediario.</p>
+                            <p class="small mb-0">No incluyas contraseñas ni información bancaria.</p>
+                        </div>
+                        <div class="contact-card">
+                            <form id="contactForm" class="contact-form">
+                                <div class="mb-3"><label for="contactName" class="form-label">Nombre</label><input
+                                        class="form-control" id="contactName" name="name" type="text" maxlength="80"
+                                        autocomplete="name" required placeholder="Tu nombre"></div>
+                                <div class="mb-3"><label for="contactEmail" class="form-label">Correo
+                                        electrónico</label><input class="form-control" id="contactEmail" name="email"
+                                        type="email" maxlength="160" autocomplete="email" required
+                                        placeholder="tunombre@correo.com"></div>
+                                <div class="mb-3"><label for="contactSubject" class="form-label">Asunto</label><input
+                                        class="form-control" id="contactSubject" name="subject" type="text"
+                                        maxlength="120" required placeholder="¿Sobre qué quieres consultar?"></div>
+                                <div class="mb-3"><label for="contactMessage"
+                                        class="form-label">Mensaje</label><textarea class="form-control"
+                                        id="contactMessage" name="message" rows="5" maxlength="2000" required
+                                        placeholder="Escribe tu mensaje..."></textarea></div>
+                                <div class="visually-hidden" aria-hidden="true"><label for="contactWebsite">No
+                                        rellenar</label><input id="contactWebsite" name="website" tabindex="-1"
+                                        autocomplete="off"></div>
+                                <button class="btn btn-pingui" id="contactSubmit" type="submit"><i
+                                        class="bi bi-send me-2"></i>Enviar mensaje</button>
+                                <div id="contactStatus" role="status" aria-live="polite"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
     <footer class="footer-pingui">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-3 mb-lg-0">
-                    <div class="footer-brand">
-                        <img src="./assets/logo-pinguino.png" alt="Pingui Store">
-                        <strong>Pingui Store ♥</strong>
-                        <p>Productos con mucho amor </p>
+                    <div class="footer-brand"><img src="./assets/logo-pinguino.png" alt="Pingui Store"><strong>Pingui
+                            Store ♥</strong>
+                        <p>Productos con mucho amor</p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3 mb-lg-0">
-                    <h6>ENLACES RÁPIDOS</h6>
-                    <a href="#" data-page="0">Inicio</a>
-                    <a href="#" data-page="1">Tienda</a>
-                    <a href="#" data-page="2">Categorías</a>
-                    <a href="#" data-page="9">Herramientas Google</a>
+                    <h6>ENLACES RÁPIDOS</h6><a href="#" data-page="0">Inicio</a><a href="#" data-page="1">Tienda</a><a
+                        href="#" data-page="2">Categorías</a><a href="#" data-page="9">Herramientas Google</a><a
+                        href="#" data-page="10">Contacto</a>
                 </div>
                 <div class="col-lg-3 text-lg-end">
                     <h6>SÍGUENOS</h6>
-                    <div class="social-icons">
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-tiktok"></i></a>
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                    </div>
+                    <div class="social-icons"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i
+                                class="bi bi-tiktok"></i></a><a href="#"><i class="bi bi-facebook"></i></a></div>
                 </div>
             </div>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
     <script>
         const links = document.querySelectorAll("[data-page]");
         const pages = document.querySelectorAll(".page");
         const menu = document.getElementById("menu");
-
         function cambiarPagina(id) {
-            pages.forEach(page => {
-                page.classList.toggle("active", page.dataset.page === id);
-            });
-            document.querySelectorAll(".nav-link").forEach(link => {
-                link.classList.toggle("active", link.dataset.page === id);
-            });
+            pages.forEach(page => page.classList.toggle("active", page.dataset.page === id));
+            document.querySelectorAll(".nav-link").forEach(link => link.classList.toggle("active", link.dataset.page === id));
             window.scrollTo({ top: 0, behavior: "smooth" });
-            if (menu.classList.contains("show")) {
-                bootstrap.Collapse.getOrCreateInstance(menu).hide();
-            }
+            if (menu.classList.contains("show")) bootstrap.Collapse.getOrCreateInstance(menu).hide();
         }
-
-        links.forEach(link => {
-            link.addEventListener("click", e => {
-                e.preventDefault();
-                const id = link.dataset.page;
-                if (id) cambiarPagina(id);
-            });
-        });
-
-        function mostrarProducto() {
-            alert("Has seleccionado: Peluche Pingüino ");
-        }
-
-        function efectoJquery() {
-            $("#jquery-producto").slideToggle(400);
-        }
-
+        links.forEach(link => link.addEventListener("click", e => { e.preventDefault(); const id = link.dataset.page; if (id) cambiarPagina(id) }));
+        function mostrarProducto() { alert("Has seleccionado: Peluche Pingüino"); }
+        function efectoJquery() { $("#jquery-producto").slideToggle(400); }
         function calificar() {
             const respuestas = ["c", "b", "a", "a", "b", "a", "b", "a", "b", "a"];
             let puntos = 0;
-
-            for (let i = 1; i <= 10; i++) {
-                const respuesta = document.querySelector('input[name="p' + i + '"]:checked');
-
-                if (respuesta && respuesta.value === respuestas[i - 1]) {
-                    puntos++;
-                }
-            }
-
+            for (let i = 1; i <= 10; i++) { const respuesta = document.querySelector('input[name="p' + i + '"]:checked'); if (respuesta && respuesta.value === respuestas[i - 1]) puntos++; }
             let mensaje = "";
-
-            if (puntos === 10) {
-                mensaje = "¡PERFECTO!";
-            } else if (puntos >= 8) {
-                mensaje = "¡Excelente trabajo!";
-            } else if (puntos >= 6) {
-                mensaje = "¡Muy bien! Solo necesitas repasar algunos conceptos.";
-            } else {
-                mensaje = "Puedes volver a revisar las páginas informativas.";
-            }
-
-            document.getElementById("resultado").innerHTML =
-                "<strong>Resultado: " + puntos + "/10</strong><br>" + mensaje;
-
-            document.getElementById("resultado").style.background =
-                puntos >= 6 ? "#dff8e8" : "#ffe3e3";
+            if (puntos === 10) mensaje = "¡PERFECTO!";
+            else if (puntos >= 8) mensaje = "¡Excelente trabajo!";
+            else if (puntos >= 6) mensaje = "¡Muy bien! Solo necesitas repasar algunos conceptos.";
+            else mensaje = "Puedes volver a revisar las páginas informativas.";
+            document.getElementById("resultado").innerHTML = "<strong>Resultado: " + puntos + "/10</strong><br>" + mensaje;
+            document.getElementById("resultado").style.background = puntos >= 6 ? "#dff8e8" : "#ffe3e3";
         }
-
         const themeToggle = document.getElementById("themeToggle");
-
         function activarTema(oscuro) {
             document.body.classList.toggle("dark-mode", oscuro);
             themeToggle.innerHTML = oscuro ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
             localStorage.setItem("pinguiTheme", oscuro ? "dark" : "light");
         }
-
-        themeToggle.addEventListener("click", () => {
-            activarTema(!document.body.classList.contains("dark-mode"));
-        });
-
+        themeToggle.addEventListener("click", () => activarTema(!document.body.classList.contains("dark-mode")));
         if (localStorage.getItem("pinguiTheme") === "dark") activarTema(true);
-
-        document.querySelectorAll(".favorite").forEach(button => {
-            button.addEventListener("click", () => {
-                const icon = button.querySelector("i");
-                icon.classList.toggle("bi-heart");
-                icon.classList.toggle("bi-heart-fill");
+        document.querySelectorAll(".favorite").forEach(button => button.addEventListener("click", () => { const icon = button.querySelector("i"); icon.classList.toggle("bi-heart"); icon.classList.toggle("bi-heart-fill") }));
+        document.querySelectorAll(".btn-cart").forEach(button => button.addEventListener("click", () => {
+            const counter = document.querySelector(".cart-icon span");
+            counter.textContent = parseInt(counter.textContent) + 1;
+            button.innerHTML = '<i class="bi bi-check2"></i> Agregado';
+            setTimeout(() => button.innerHTML = '<i class="bi bi-cart3"></i> Agregar al carrito', 1200);
+        }));
+        const contactForm = document.getElementById("contactForm");
+        if (contactForm) {
+            contactForm.addEventListener("submit", async event => {
+                event.preventDefault();
+                const status = document.getElementById("contactStatus");
+                const submit = document.getElementById("contactSubmit");
+                const data = Object.fromEntries(new FormData(contactForm).entries());
+                status.style.display = "block";
+                status.style.background = "#dff3ff";
+                status.style.color = "#17405c";
+                status.textContent = "Enviando tu mensaje...";
+                submit.disabled = true;
+                try {
+                    const response = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+                    const result = await response.json().catch(() => ({}));
+                    if (!response.ok) throw new Error(result.error || "No se pudo enviar el mensaje.");
+                    status.style.background = "#dff8e8";
+                    status.style.color = "#175c35";
+                    status.textContent = "¡Mensaje enviado! Gracias por contactar a Pingui Store.";
+                    contactForm.reset();
+                } catch (error) {
+                    status.style.background = "#ffe3e3";
+                    status.style.color = "#7a2020";
+                    status.textContent = error.message || "No se pudo enviar. Comprueba que el servidor esté funcionando e inténtalo de nuevo.";
+                } finally { submit.disabled = false; }
             });
-        });
-
-        document.querySelectorAll(".btn-cart").forEach(button => {
-            button.addEventListener("click", () => {
-                const counter = document.querySelector(".cart-icon span");
-                counter.textContent = parseInt(counter.textContent) + 1;
-                button.innerHTML = '<i class="bi bi-check2"></i> Agregado';
-                setTimeout(() => {
-                    button.innerHTML = '<i class="bi bi-cart3"></i> Agregar al carrito';
-                }, 1200);
-            });
-        });
+        }
     </script>
-
 </body>
 
 </html>

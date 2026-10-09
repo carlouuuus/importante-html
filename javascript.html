@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>JavaScript | Pingui Store</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="./css/estilos.css">
 </head>
 
 <body>
@@ -17,42 +18,39 @@
             <a href="questionario.html">Cuestionario Web</a>
         </nav>
     </header>
-
     <main>
         <section>
             <h2>JavaScript (JS Vanilla)</h2>
             <p>JavaScript es un lenguaje de programación utilizado para agregar interactividad y comportamiento a las
                 páginas web. En Pingui Store permite crear funciones como botones, menús, efectos y acciones
                 interactivas.</p>
-
             <h3>HTML, CSS y JavaScript</h3>
             <ul>
                 <li><strong>HTML:</strong> proporciona la estructura de la página.</li>
                 <li><strong>CSS:</strong> controla los colores, tamaños, fuentes y diseño.</li>
                 <li><strong>JavaScript:</strong> agrega comportamiento e interacción.</li>
             </ul>
-
             <h3>Conceptos básicos</h3>
             <p><strong>Variables:</strong> almacenan información, como el nombre o precio de un producto.</p>
             <p><strong>Funciones:</strong> contienen instrucciones que pueden ejecutarse cuando sea necesario.</p>
             <p><strong>Eventos:</strong> permiten responder a acciones del usuario, como hacer clic sobre un botón.</p>
-
             <h3>Ejemplo práctico</h3>
             <pre><code>let producto = "Peluche Pingüino";
 
 function mostrarProducto() {
     alert("Has seleccionado: " + producto);
 }</code></pre>
-
-            <button onclick="mostrarProducto()">Ver producto</button>
+            <button type="button" id="btnProducto">Ver producto</button>
         </section>
     </main>
-
+    <script src="./js/script.js"></script>
     <script>
-        function mostrarProducto() {
-            alert("Has seleccionado: Peluche Pingüino 🐧");
+        const btnProducto = document.querySelector("#btnProducto");
+        if (btnProducto) {
+            btnProducto.addEventListener("click", function () {
+                alert("Has seleccionado: Peluche Pingüino 🐧");
+            });
         }
     </script>
 </body>
-
 </html>
