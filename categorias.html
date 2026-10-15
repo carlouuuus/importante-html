@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -20,17 +21,20 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="menu">
                 <ul class="navbar-nav gap-lg-2">
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./tienda.html">Tienda</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="./categorias.html">Categorías</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./tienda.html"><span data-es="Tienda" data-en="Shop">Tienda</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./categorias.html"><span data-es="Categorías" data-en="Categories">Categorías</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./nosotros.html"><span data-es="Nosotros" data-en="About Us">Nosotros</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="./javascript.html">JavaScript</a></li>
                     <li class="nav-item"><a class="nav-link" href="./jquery.html">jQuery</a></li>
                     <li class="nav-item"><a class="nav-link" href="./json.html">JSON</a></li>
                     <li class="nav-item"><a class="nav-link" href="./hosting.html">Hosting</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./cuestionario.html">Cuestionario</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./google-ia.html">IAs de Google</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./cuestionario.html"><span data-es="Cuestionario" data-en="Quiz">Cuestionario</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./google-ia.html"><span data-es="IAs de Google" data-en="Google AI">IAs de Google</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacto.html"><span data-es="Contacto" data-en="Contact">Contacto</span></a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <button id="idiomaToggle" class="btn btn-sm btn-outline-primary" type="button" onclick="cambiarIdioma(localStorage.getItem('idiomaPingui') === 'en' ? 'es' : 'en')">🇸🇻 Español</button>
+                    </li>
                 </ul>
             </div>
             <div class="d-flex align-items-center gap-2">
@@ -39,62 +43,6 @@
                 </button>
                 <a href="./tienda.html" class="nav-icon cart-icon" aria-label="Ir al carrito">
                     <i class="bi bi-cart3"></i><span>0</span>
-                    
-<nav class="navbar navbar-expand-lg navbar-pingui fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="./assets/logo-pingui.png" alt="Pingui Store" height="48">
-            Pingui Store
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPingui" aria-controls="navbarPingui" aria-expanded="false" aria-label="Abrir menú">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarPingui">
-            <ul class="navbar-nav ms-auto align-items-lg-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tienda.html" data-es="Tienda" data-en="Shop">Tienda</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="categorias.html" data-es="Categorías" data-en="Categories">Categorías</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="nosotros.html" data-es="Nosotros" data-en="About Us">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript.html" data-es="JavaScript" data-en="JavaScript">JavaScript</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="jquery.html" data-es="jQuery" data-en="jQuery">jQuery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="json.html" data-es="JSON" data-en="JSON">JSON</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="hosting.html" data-es="Hosting" data-en="Hosting">Hosting</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cuestionario.html" data-es="Cuestionario" data-en="Quiz">Cuestionario</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="google-ia.html" data-es="IAs de Google" data-en="Google AI">IAs de Google</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contacto.html" data-es="Contacto" data-en="Contact">Contacto</a>
-                </li>
-                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                    <select id="selectorIdioma" onchange="cambiarIdioma(this.value)" class="form-select form-select-sm" aria-label="Cambiar idioma">
-                        <option value="es">🇸🇻 Español</option>
-                        <option value="en">🇺🇸 English</option>
-                    </select>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
                 </a>
             </div>
         </div>
@@ -104,9 +52,11 @@
         <section class="products-section">
             <div class="container">
                 <div class="section-heading">
-                    <span></span><h2>Nuestras categorías</h2><span></span>
+                    <span></span>
+                    <h2 data-es="Nuestras categorías" data-en="Our Categories">Nuestras categorías</h2>
+                    <span></span>
                 </div>
-                <p class="text-center mb-4">Encuentra tus productos favoritos y descubre un mundo lleno de ternura.</p>
+                <p class="text-center mb-4" data-es="Encuentra tus productos favoritos y descubre un mundo lleno de ternura." data-en="Find your favorite products and discover a world full of cuteness.">Encuentra tus productos favoritos y descubre un mundo lleno de ternura.</p>
 
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-4">
@@ -114,9 +64,9 @@
                             <div class="category-circle blue mb-3">
                                 <i class="bi bi-heart-fill fs-1"></i>
                             </div>
-                            <h3>Peluches</h3>
-                            <p>Pingüinos suaves y adorables para regalar o coleccionar.</p>
-                            <a href="./tienda.html" class="btn btn-pingui">Ver productos</a>
+                            <h3 data-es="Peluches" data-en="Plush Toys">Peluches</h3>
+                            <p data-es="Pingüinos suaves y adorables para regalar o coleccionar." data-en="Soft and adorable penguins to give as gifts or collect.">Pingüinos suaves y adorables para regalar o coleccionar.</p>
+                            <a href="./tienda.html" class="btn btn-pingui" data-es="Ver productos" data-en="View Products">Ver productos</a>
                         </div>
                     </div>
 
@@ -125,9 +75,9 @@
                             <div class="category-circle yellow mb-3">
                                 <i class="bi bi-cup-hot-fill fs-1"></i>
                             </div>
-                            <h3>Tazas y accesorios</h3>
-                            <p>Accesorios con diseños inspirados en nuestros amigos pingüinos.</p>
-                            <a href="./tienda.html" class="btn btn-pingui">Ver productos</a>
+                            <h3 data-es="Tazas y accesorios" data-en="Mugs and Accessories">Tazas y accesorios</h3>
+                            <p data-es="Accesorios con diseños inspirados en nuestros amigos pingüinos." data-en="Accessories with designs inspired by our penguin friends.">Accesorios con diseños inspirados en nuestros amigos pingüinos.</p>
+                            <a href="./tienda.html" class="btn btn-pingui" data-es="Ver productos" data-en="View Products">Ver productos</a>
                         </div>
                     </div>
 
@@ -136,9 +86,9 @@
                             <div class="category-circle pink mb-3">
                                 <i class="bi bi-backpack-fill fs-1"></i>
                             </div>
-                            <h3>Mochilas y bolsos</h3>
-                            <p>Lleva contigo un toque de ternura a donde vayas.</p>
-                            <a href="./tienda.html" class="btn btn-pingui">Ver productos</a>
+                            <h3 data-es="Mochilas y bolsos" data-en="Backpacks and Bags">Mochilas y bolsos</h3>
+                            <p data-es="Lleva contigo un toque de ternura a donde vayas." data-en="Take a touch of cuteness with you wherever you go.">Lleva contigo un toque de ternura a donde vayas.</p>
+                            <a href="./tienda.html" class="btn btn-pingui" data-es="Ver productos" data-en="View Products">Ver productos</a>
                         </div>
                     </div>
 
@@ -147,9 +97,9 @@
                             <div class="category-circle blue mb-3">
                                 <i class="bi bi-key-fill fs-1"></i>
                             </div>
-                            <h3>Llaveros</h3>
-                            <p>Pequeños detalles para decorar tus llaves o mochila.</p>
-                            <a href="./tienda.html" class="btn btn-pingui">Ver productos</a>
+                            <h3 data-es="Llaveros" data-en="Keychains">Llaveros</h3>
+                            <p data-es="Pequeños detalles para decorar tus llaves o mochila." data-en="Small accessories to decorate your keys or backpack.">Pequeños detalles para decorar tus llaves o mochila.</p>
+                            <a href="./tienda.html" class="btn btn-pingui" data-es="Ver productos" data-en="View Products">Ver productos</a>
                         </div>
                     </div>
 
@@ -158,9 +108,9 @@
                             <div class="category-circle yellow mb-3">
                                 <i class="bi bi-gift-fill fs-1"></i>
                             </div>
-                            <h3>Regalos</h3>
-                            <p>Detalles tiernos para sorprender a alguien especial.</p>
-                            <a href="./tienda.html" class="btn btn-pingui">Ver productos</a>
+                            <h3 data-es="Regalos" data-en="Gifts">Regalos</h3>
+                            <p data-es="Detalles tiernos para sorprender a alguien especial." data-en="Cute gifts to surprise someone special.">Detalles tiernos para sorprender a alguien especial.</p>
+                            <a href="./tienda.html" class="btn btn-pingui" data-es="Ver productos" data-en="View Products">Ver productos</a>
                         </div>
                     </div>
 
@@ -169,9 +119,9 @@
                             <div class="category-circle pink mb-3">
                                 <i class="bi bi-stars fs-1"></i>
                             </div>
-                            <h3>Otros productos</h3>
-                            <p>Descubre más artículos de la colección Pingui Store.</p>
-                            <a href="./tienda.html" class="btn btn-pingui">Ver productos</a>
+                            <h3 data-es="Otros productos" data-en="Other Products">Otros productos</h3>
+                            <p data-es="Descubre más artículos de la colección Pingui Store." data-en="Discover more items from the Pingui Store collection.">Descubre más artículos de la colección Pingui Store.</p>
+                            <a href="./tienda.html" class="btn btn-pingui" data-es="Ver productos" data-en="View Products">Ver productos</a>
                         </div>
                     </div>
                 </div>
@@ -186,18 +136,18 @@
                     <div class="footer-brand">
                         <img src="./assets/logo-pinguino.png" alt="Pingui Store">
                         <strong>Pingui Store ♥</strong>
-                        <p>Productos con mucho amor</p>
+                        <p data-es="Productos con mucho amor" data-en="Products made with lots of love">Productos con mucho amor</p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3 mb-lg-0">
-                    <h6>ENLACES RÁPIDOS</h6>
-                    <a href="./index.html">Inicio</a>
-                    <a href="./tienda.html">Tienda</a>
-                    <a href="./categorias.html">Categorías</a>
-                    <a href="./google-ia.html">IAs de Google</a>
+                    <h6 data-es="ENLACES RÁPIDOS" data-en="QUICK LINKS">ENLACES RÁPIDOS</h6>
+                    <a href="./index.html" data-es="Inicio" data-en="Home">Inicio</a>
+                    <a href="./tienda.html" data-es="Tienda" data-en="Shop">Tienda</a>
+                    <a href="./categorias.html" data-es="Categorías" data-en="Categories">Categorías</a>
+                    <a href="./google-ia.html" data-es="IAs de Google" data-en="Google AI">IAs de Google</a>
                 </div>
                 <div class="col-lg-3 text-lg-end">
-                    <h6>SÍGUENOS</h6>
+                    <h6 data-es="SÍGUENOS" data-en="FOLLOW US">SÍGUENOS</h6>
                     <div class="social-icons">
                         <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>

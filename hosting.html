@@ -1,6 +1,6 @@
+
 <!doctype html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,102 +9,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
-
 <body>
-
     <nav class="navbar navbar-expand-lg fixed-top navbar-pingui">
         <div class="container">
-            <a class="navbar-brand" href="./index.html"><img src="./assets/logo-pinguino.png" alt="Pingui Store"
-                    class="logo-pingui"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-                aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span
-                    class="navbar-toggler-icon"></span></button>
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/logo-pinguino.png" alt="Pingui Store" class="logo-pingui">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse justify-content-center" id="menu">
                 <ul class="navbar-nav gap-lg-2">
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./tienda.html">Tienda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./categorias.html">Categorías</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./tienda.html" data-es="Tienda" data-en="Shop">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./categorias.html" data-es="Categorías" data-en="Categories">Categorías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./nosotros.html" data-es="Nosotros" data-en="About Us">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link" href="./javascript.html">JavaScript</a></li>
                     <li class="nav-item"><a class="nav-link" href="./jquery.html">jQuery</a></li>
                     <li class="nav-item"><a class="nav-link" href="./json.html">JSON</a></li>
                     <li class="nav-item"><a class="nav-link active" href="./hosting.html">Hosting</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./cuestionario.html">Cuestionario</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./google-ia.html">IAs de Google</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./cuestionario.html" data-es="Cuestionario" data-en="Quiz">Cuestionario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./google-ia.html" data-es="IAs de Google" data-en="Google AI">IAs de Google</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacto.html" data-es="Contacto" data-en="Contact">Contacto</a></li>
                 </ul>
             </div>
             <div class="d-flex align-items-center gap-2">
-                <button id="themeToggle" class="theme-btn" type="button" aria-label="Cambiar tema"><i
-                        class="bi bi-moon"></i></button>
-                <a href="./tienda.html" class="nav-icon cart-icon" aria-label="Ir a la tienda"><i
-                        class="bi bi-cart3"></i><span>0</span></a>
-
-                <nav class="navbar navbar-expand-lg navbar-pingui fixed-top">
-                    <div class="container">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="./assets/logo-pingui.png" alt="Pingui Store" height="48">
-                            Pingui Store
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarPingui" aria-controls="navbarPingui" aria-expanded="false"
-                            aria-label="Abrir menú">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarPingui">
-                            <ul class="navbar-nav ms-auto align-items-lg-center">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="tienda.html" data-es="Tienda" data-en="Shop">Tienda</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="categorias.html" data-es="Categorías"
-                                        data-en="Categories">Categorías</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="nosotros.html" data-es="Nosotros"
-                                        data-en="About Us">Nosotros</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="javascript.html" data-es="JavaScript"
-                                        data-en="JavaScript">JavaScript</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="jquery.html" data-es="jQuery" data-en="jQuery">jQuery</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="json.html" data-es="JSON" data-en="JSON">JSON</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="hosting.html" data-es="Hosting"
-                                        data-en="Hosting">Hosting</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="cuestionario.html" data-es="Cuestionario"
-                                        data-en="Quiz">Cuestionario</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="google-ia.html" data-es="IAs de Google"
-                                        data-en="Google AI">IAs de Google</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contacto.html" data-es="Contacto"
-                                        data-en="Contact">Contacto</a>
-                                </li>
-                                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                                    <select id="selectorIdioma" onchange="cambiarIdioma(this.value)"
-                                        class="form-select form-select-sm" aria-label="Cambiar idioma">
-                                        <option value="es">🇸🇻 Español</option>
-                                        <option value="en">🇺🇸 English</option>
-                                    </select>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-
+                <button id="idiomaToggle" class="btn btn-sm btn-outline-primary" type="button" onclick="cambiarIdioma(localStorage.getItem('idiomaPingui') === 'en' ? 'es' : 'en')">🇸🇻 Español</button>
+                <button id="themeToggle" class="theme-btn" type="button" aria-label="Cambiar tema"><i class="bi bi-moon"></i></button>
+                <a href="./tienda.html" class="nav-icon cart-icon" aria-label="Ir a la tienda"><i class="bi bi-cart3"></i><span>0</span></a>
             </div>
         </div>
     </nav>
@@ -112,71 +44,67 @@
     <main class="info-section">
         <div class="container">
             <div class="info-box">
-                <div class="section-heading"><span></span>
-                    <h2>Hosting</h2><span></span>
+                <div class="section-heading">
+                    <span></span>
+                    <h2>Hosting</h2>
+                    <span></span>
                 </div>
-                <p>El hosting o alojamiento web es un servicio que permite guardar los archivos de una página web en un
-                    servidor para que las personas puedan visitarla a través de Internet.</p>
+                <p data-es="El hosting o alojamiento web es un servicio que permite guardar los archivos de una página web en un servidor para que las personas puedan visitarla a través de Internet." data-en="Web hosting is a service that stores a website's files on a server so people can visit it through the Internet.">El hosting o alojamiento web es un servicio que permite guardar los archivos de una página web en un servidor para que las personas puedan visitarla a través de Internet.</p>
 
-                <h3>¿Por qué es importante?</h3>
+                <h3 data-es="¿Por qué es importante?" data-en="Why is it important?">¿Por qué es importante?</h3>
                 <div class="row g-3">
                     <div class="col-md-4">
                         <div class="tech-card">
-                            <h4><i class="bi bi-globe"></i> Acceso en línea</h4>
-                            <p>Permite que las personas visiten la página desde diferentes lugares y dispositivos.</p>
+                            <h4><i class="bi bi-globe"></i> <span data-es="Acceso en línea" data-en="Online Access">Acceso en línea</span></h4>
+                            <p data-es="Permite que las personas visiten la página desde diferentes lugares y dispositivos." data-en="It allows people to visit the website from different places and devices.">Permite que las personas visiten la página desde diferentes lugares y dispositivos.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="tech-card">
-                            <h4><i class="bi bi-server"></i> Almacenamiento</h4>
-                            <p>Guarda los archivos, imágenes y recursos necesarios para mostrar el sitio web.</p>
+                            <h4><i class="bi bi-server"></i> <span data-es="Almacenamiento" data-en="Storage">Almacenamiento</span></h4>
+                            <p data-es="Guarda los archivos, imágenes y recursos necesarios para mostrar el sitio web." data-en="It stores the files, images, and resources needed to display the website.">Guarda los archivos, imágenes y recursos necesarios para mostrar el sitio web.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="tech-card">
-                            <h4><i class="bi bi-shield-check"></i> Disponibilidad</h4>
-                            <p>Ayuda a mantener la página disponible para sus visitantes.</p>
+                            <h4><i class="bi bi-shield-check"></i> <span data-es="Disponibilidad" data-en="Availability">Disponibilidad</span></h4>
+                            <p data-es="Ayuda a mantener la página disponible para sus visitantes." data-en="It helps keep the website available to its visitors.">Ayuda a mantener la página disponible para sus visitantes.</p>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="mt-4">Tipos de hosting</h3>
+                <h3 class="mt-4" data-es="Tipos de hosting" data-en="Types of Hosting">Tipos de hosting</h3>
                 <div class="row g-3">
                     <div class="col-md-6">
                         <div class="tech-card">
-                            <h4>Hosting compartido</h4>
-                            <p>Varios sitios web utilizan los recursos de un mismo servidor. Suele ser una opción
-                                económica para proyectos pequeños.</p>
+                            <h4 data-es="Hosting compartido" data-en="Shared Hosting">Hosting compartido</h4>
+                            <p data-es="Varios sitios web utilizan los recursos de un mismo servidor. Suele ser una opción económica para proyectos pequeños." data-en="Several websites use the resources of the same server. It is usually an affordable option for small projects.">Varios sitios web utilizan los recursos de un mismo servidor. Suele ser una opción económica para proyectos pequeños.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="tech-card">
-                            <h4>Hosting dedicado</h4>
-                            <p>Un servidor se destina a un solo cliente, ofreciendo mayor control sobre sus recursos.
-                            </p>
+                            <h4 data-es="Hosting dedicado" data-en="Dedicated Hosting">Hosting dedicado</h4>
+                            <p data-es="Un servidor se destina a un solo cliente, ofreciendo mayor control sobre sus recursos." data-en="A server is assigned to a single client, providing greater control over its resources.">Un servidor se destina a un solo cliente, ofreciendo mayor control sobre sus recursos.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="tech-card">
-                            <h4>Hosting VPS</h4>
-                            <p>Un servidor físico se divide en entornos virtuales con recursos asignados a cada usuario.
-                            </p>
+                            <h4 data-es="Hosting VPS" data-en="VPS Hosting">Hosting VPS</h4>
+                            <p data-es="Un servidor físico se divide en entornos virtuales con recursos asignados a cada usuario." data-en="A physical server is divided into virtual environments with resources assigned to each user.">Un servidor físico se divide en entornos virtuales con recursos asignados a cada usuario.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="tech-card">
-                            <h4>Hosting en la nube</h4>
-                            <p>Utiliza recursos de varios servidores conectados para alojar y mantener una página web.
-                            </p>
+                            <h4 data-es="Hosting en la nube" data-en="Cloud Hosting">Hosting en la nube</h4>
+                            <p data-es="Utiliza recursos de varios servidores conectados para alojar y mantener una página web." data-en="It uses resources from several connected servers to host and maintain a website.">Utiliza recursos de varios servidores conectados para alojar y mantener una página web.</p>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="mt-4">Ejemplo en Pingui Store</h3>
+                <h3 class="mt-4" data-es="Ejemplo en Pingui Store" data-en="Example at Pingui Store">Ejemplo en Pingui Store</h3>
                 <div class="tech-demo">
-                    <h4><i class="bi bi-cloud-check"></i> Nuestra tienda en línea</h4>
-                    <p>Para que los clientes puedan visitar Pingui Store por Internet, sus archivos deben estar alojados
-                        en un servicio de hosting.</p>
+                    <h4><i class="bi bi-cloud-check"></i> <span data-es="Nuestra tienda en línea" data-en="Our Online Store">Nuestra tienda en línea</span></h4>
+                    <p data-es="Para que los clientes puedan visitar Pingui Store por Internet, sus archivos deben estar alojados en un servicio de hosting." data-en="For customers to visit Pingui Store online, its files must be hosted by a web hosting service.">Para que los clientes puedan visitar Pingui Store por Internet, sus archivos deben estar alojados en un servicio de hosting.</p>
                 </div>
             </div>
         </div>
@@ -189,18 +117,18 @@
                     <div class="footer-brand">
                         <img src="./assets/logo-pinguino.png" alt="Pingui Store">
                         <strong>Pingui Store ♥</strong>
-                        <p>Productos con mucho amor</p>
+                        <p data-es="Productos con mucho amor" data-en="Products made with lots of love">Productos con mucho amor</p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3 mb-lg-0">
-                    <h6>ENLACES RÁPIDOS</h6>
-                    <a href="./index.html">Inicio</a>
-                    <a href="./tienda.html">Tienda</a>
-                    <a href="./categorias.html">Categorías</a>
-                    <a href="./google-ia.html">IAs de Google</a>
+                    <h6 data-es="ENLACES RÁPIDOS" data-en="QUICK LINKS">ENLACES RÁPIDOS</h6>
+                    <a href="./index.html" data-es="Inicio" data-en="Home">Inicio</a>
+                    <a href="./tienda.html" data-es="Tienda" data-en="Shop">Tienda</a>
+                    <a href="./categorias.html" data-es="Categorías" data-en="Categories">Categorías</a>
+                    <a href="./google-ia.html" data-es="IAs de Google" data-en="Google AI">IAs de Google</a>
                 </div>
                 <div class="col-lg-3 text-lg-end">
-                    <h6>SÍGUENOS</h6>
+                    <h6 data-es="SÍGUENOS" data-en="FOLLOW US">SÍGUENOS</h6>
                     <div class="social-icons">
                         <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
@@ -213,6 +141,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            cambiarIdioma(localStorage.getItem("idiomaPingui") || "es");
+        });
+    </script>
 </body>
-
 </html>

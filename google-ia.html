@@ -1,6 +1,6 @@
+
 <!doctype html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,102 +9,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
-
 <body>
-
     <nav class="navbar navbar-expand-lg fixed-top navbar-pingui">
         <div class="container">
-            <a class="navbar-brand" href="./index.html"><img src="./assets/logo-pinguino.png" alt="Pingui Store"
-                    class="logo-pingui"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-                aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span
-                    class="navbar-toggler-icon"></span></button>
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/logo-pinguino.png" alt="Pingui Store" class="logo-pingui">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse justify-content-center" id="menu">
                 <ul class="navbar-nav gap-lg-2">
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./tienda.html">Tienda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./categorias.html">Categorías</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./tienda.html" data-es="Tienda" data-en="Shop">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./categorias.html" data-es="Categorías" data-en="Categories">Categorías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./nosotros.html" data-es="Nosotros" data-en="About Us">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link" href="./javascript.html">JavaScript</a></li>
                     <li class="nav-item"><a class="nav-link" href="./jquery.html">jQuery</a></li>
                     <li class="nav-item"><a class="nav-link" href="./json.html">JSON</a></li>
                     <li class="nav-item"><a class="nav-link" href="./hosting.html">Hosting</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./cuestionario.html">Cuestionario</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="./google-ia.html">IAs de Google</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./cuestionario.html" data-es="Cuestionario" data-en="Quiz">Cuestionario</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./google-ia.html" data-es="IAs de Google" data-en="Google AI">IAs de Google</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacto.html" data-es="Contacto" data-en="Contact">Contacto</a></li>
                 </ul>
             </div>
             <div class="d-flex align-items-center gap-2">
-                <button id="themeToggle" class="theme-btn" type="button" aria-label="Cambiar tema"><i
-                        class="bi bi-moon"></i></button>
-                <a href="./tienda.html" class="nav-icon cart-icon" aria-label="Ir a la tienda"><i
-                        class="bi bi-cart3"></i><span>0</span></a>
-
-                <nav class="navbar navbar-expand-lg navbar-pingui fixed-top">
-                    <div class="container">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="./assets/logo-pingui.png" alt="Pingui Store" height="48">
-                            Pingui Store
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarPingui" aria-controls="navbarPingui" aria-expanded="false"
-                            aria-label="Abrir menú">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarPingui">
-                            <ul class="navbar-nav ms-auto align-items-lg-center">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="tienda.html" data-es="Tienda" data-en="Shop">Tienda</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="categorias.html" data-es="Categorías"
-                                        data-en="Categories">Categorías</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="nosotros.html" data-es="Nosotros"
-                                        data-en="About Us">Nosotros</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="javascript.html" data-es="JavaScript"
-                                        data-en="JavaScript">JavaScript</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="jquery.html" data-es="jQuery" data-en="jQuery">jQuery</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="json.html" data-es="JSON" data-en="JSON">JSON</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="hosting.html" data-es="Hosting"
-                                        data-en="Hosting">Hosting</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="cuestionario.html" data-es="Cuestionario"
-                                        data-en="Quiz">Cuestionario</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="google-ia.html" data-es="IAs de Google"
-                                        data-en="Google AI">IAs de Google</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contacto.html" data-es="Contacto"
-                                        data-en="Contact">Contacto</a>
-                                </li>
-                                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                                    <select id="selectorIdioma" onchange="cambiarIdioma(this.value)"
-                                        class="form-select form-select-sm" aria-label="Cambiar idioma">
-                                        <option value="es">🇸🇻 Español</option>
-                                        <option value="en">🇺🇸 English</option>
-                                    </select>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-
+                <button id="idiomaToggle" class="btn btn-sm btn-outline-primary" type="button" onclick="cambiarIdioma(localStorage.getItem('idiomaPingui') === 'en' ? 'es' : 'en')">🇸🇻 Español</button>
+                <button id="themeToggle" class="theme-btn" type="button" aria-label="Cambiar tema"><i class="bi bi-moon"></i></button>
+                <a href="./tienda.html" class="nav-icon cart-icon" aria-label="Ir a la tienda"><i class="bi bi-cart3"></i><span>0</span></a>
             </div>
         </div>
     </nav>
@@ -112,163 +44,138 @@
     <main class="info-section">
         <div class="container">
             <div class="info-box">
-                <div class="section-heading"><span></span>
-                    <h2>15 inteligencias artificiales de Google</h2><span></span>
+                <div class="section-heading">
+                    <span></span>
+                    <h2 data-es="15 inteligencias artificiales de Google" data-en="15 Google Artificial Intelligence Tools">15 inteligencias artificiales de Google</h2>
+                    <span></span>
                 </div>
-                <p>Google cuenta con distintas herramientas de inteligencia artificial que ayudan a estudiar,
-                    investigar, crear imágenes, producir videos y desarrollar proyectos. Explora estas 15 opciones.</p>
+                <p data-es="Google cuenta con distintas herramientas de inteligencia artificial que ayudan a estudiar, investigar, crear imágenes, producir videos y desarrollar proyectos. Explora estas 15 opciones." data-en="Google offers different artificial intelligence tools that help users study, research, create images, produce videos, and develop projects. Explore these 15 options.">Google cuenta con distintas herramientas de inteligencia artificial que ayudan a estudiar, investigar, crear imágenes, producir videos y desarrollar proyectos. Explora estas 15 opciones.</p>
 
                 <div class="row g-3">
-
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
                             <h4>1. Gemini</h4>
-                            <p>Asistente de inteligencia artificial que responde preguntas, explica temas, redacta
-                                textos y ayuda a generar ideas.</p>
-                            <a href="https://gemini.google.com/" target="_blank" rel="noopener">Probar Gemini ↗</a>
+                            <p data-es="Asistente de inteligencia artificial que responde preguntas, explica temas, redacta textos y ayuda a generar ideas." data-en="An AI assistant that answers questions, explains topics, writes text, and helps generate ideas.">Asistente de inteligencia artificial que responde preguntas, explica temas, redacta textos y ayuda a generar ideas.</p>
+                            <a href="https://gemini.google.com/" target="_blank" rel="noopener" data-es="Probar Gemini ↗" data-en="Try Gemini ↗">Probar Gemini ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
-                            <h4>2. Gemini Notebook</h4>
-                            <p>Ayuda a investigar y estudiar a partir de documentos y fuentes, creando resúmenes y
-                                explicaciones. Antes se conocía como NotebookLM.</p>
-                            <a href="https://notebooklm.google.com/" target="_blank" rel="noopener">Explorar NotebookLM
-                                ↗</a>
+                            <h4>2. NotebookLM</h4>
+                            <p data-es="Ayuda a investigar y estudiar a partir de documentos y fuentes, creando resúmenes y explicaciones." data-en="Helps users research and study documents and sources by creating summaries and explanations.">Ayuda a investigar y estudiar a partir de documentos y fuentes, creando resúmenes y explicaciones.</p>
+                            <a href="https://notebooklm.google.com/" target="_blank" rel="noopener" data-es="Explorar NotebookLM ↗" data-en="Explore NotebookLM ↗">Explorar NotebookLM ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
                             <h4>3. Google AI Studio</h4>
-                            <p>Permite experimentar con modelos Gemini y crear prototipos de aplicaciones con
-                                inteligencia artificial.</p>
-                            <a href="https://aistudio.google.com/" target="_blank" rel="noopener">Visitar AI Studio
-                                ↗</a>
+                            <p data-es="Permite experimentar con modelos Gemini y crear prototipos de aplicaciones con inteligencia artificial." data-en="Allows users to experiment with Gemini models and create AI application prototypes.">Permite experimentar con modelos Gemini y crear prototipos de aplicaciones con inteligencia artificial.</p>
+                            <a href="https://aistudio.google.com/" target="_blank" rel="noopener" data-es="Visitar AI Studio ↗" data-en="Visit AI Studio ↗">Visitar AI Studio ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
-                            <h4>4. Google Search con IA</h4>
-                            <p>Ayuda a explorar preguntas y obtener respuestas resumidas con información de diferentes
-                                páginas web, según la disponibilidad de las funciones.</p>
-                            <a href="https://www.google.com/" target="_blank" rel="noopener">Abrir Google ↗</a>
+                            <h4 data-es="4. Google Search con IA" data-en="4. Google Search with AI">4. Google Search con IA</h4>
+                            <p data-es="Ayuda a explorar preguntas y obtener respuestas resumidas con información de diferentes páginas web, según la disponibilidad de las funciones." data-en="Helps users explore questions and get summarized answers based on information from different websites, depending on feature availability.">Ayuda a explorar preguntas y obtener respuestas resumidas con información de diferentes páginas web, según la disponibilidad de las funciones.</p>
+                            <a href="https://www.google.com/" target="_blank" rel="noopener" data-es="Abrir Google ↗" data-en="Open Google ↗">Abrir Google ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
                             <h4>5. Google Translate</h4>
-                            <p>Utiliza tecnologías de aprendizaje automático para traducir palabras, textos, páginas y
-                                conversaciones entre idiomas.</p>
-                            <a href="https://translate.google.com/" target="_blank" rel="noopener">Probar Traductor
-                                ↗</a>
+                            <p data-es="Utiliza tecnologías de aprendizaje automático para traducir palabras, textos, páginas y conversaciones entre idiomas." data-en="Uses machine learning technology to translate words, texts, websites, and conversations between languages.">Utiliza tecnologías de aprendizaje automático para traducir palabras, textos, páginas y conversaciones entre idiomas.</p>
+                            <a href="https://translate.google.com/" target="_blank" rel="noopener" data-es="Probar Traductor ↗" data-en="Try Google Translate ↗">Probar Traductor ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
                             <h4>6. Google Lens</h4>
-                            <p>Analiza imágenes para reconocer objetos, identificar plantas, copiar texto y encontrar
-                                información visual.</p>
-                            <a href="https://lens.google/" target="_blank" rel="noopener">Explorar Lens ↗</a>
+                            <p data-es="Analiza imágenes para reconocer objetos, identificar plantas, copiar texto y encontrar información visual." data-en="Analyzes images to recognize objects, identify plants, copy text, and find visual information.">Analiza imágenes para reconocer objetos, identificar plantas, copiar texto y encontrar información visual.</p>
+                            <a href="https://lens.google/" target="_blank" rel="noopener" data-es="Explorar Lens ↗" data-en="Explore Lens ↗">Explorar Lens ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
-                            <h4>7. Google Photos con IA</h4>
-                            <p>Incluye funciones inteligentes para buscar recuerdos, organizar fotografías y editar
-                                imágenes compatibles.</p>
-                            <a href="https://photos.google.com/" target="_blank" rel="noopener">Abrir Google Fotos ↗</a>
+                            <h4 data-es="7. Google Fotos con IA" data-en="7. Google Photos with AI">7. Google Fotos con IA</h4>
+                            <p data-es="Incluye funciones inteligentes para buscar recuerdos, organizar fotografías y editar imágenes compatibles." data-en="Includes smart features for finding memories, organizing photos, and editing supported images.">Incluye funciones inteligentes para buscar recuerdos, organizar fotografías y editar imágenes compatibles.</p>
+                            <a href="https://photos.google.com/" target="_blank" rel="noopener" data-es="Abrir Google Fotos ↗" data-en="Open Google Photos ↗">Abrir Google Fotos ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
                             <h4>8. Google Cloud Vertex AI</h4>
-                            <p>Plataforma para que empresas y desarrolladores creen, prueben e implementen aplicaciones
-                                de inteligencia artificial.</p>
-                            <a href="https://cloud.google.com/vertex-ai" target="_blank" rel="noopener">Conocer Vertex
-                                AI ↗</a>
+                            <p data-es="Plataforma para que empresas y desarrolladores creen, prueben e implementen aplicaciones de inteligencia artificial." data-en="A platform that allows businesses and developers to build, test, and deploy AI applications.">Plataforma para que empresas y desarrolladores creen, prueben e implementen aplicaciones de inteligencia artificial.</p>
+                            <a href="https://cloud.google.com/vertex-ai" target="_blank" rel="noopener" data-es="Conocer Vertex AI ↗" data-en="Learn about Vertex AI ↗">Conocer Vertex AI ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
-                            <h4>9. Gemini en Gmail</h4>
-                            <p>Ayuda a redactar correos, resumir conversaciones y encontrar información en mensajes,
-                                según el plan disponible.</p>
-                            <a href="https://mail.google.com/" target="_blank" rel="noopener">Abrir Gmail ↗</a>
+                            <h4 data-es="9. Gemini en Gmail" data-en="9. Gemini in Gmail">9. Gemini en Gmail</h4>
+                            <p data-es="Ayuda a redactar correos, resumir conversaciones y encontrar información en mensajes, según el plan disponible." data-en="Helps write emails, summarize conversations, and find information in messages, depending on the available plan.">Ayuda a redactar correos, resumir conversaciones y encontrar información en mensajes, según el plan disponible.</p>
+                            <a href="https://mail.google.com/" target="_blank" rel="noopener" data-es="Abrir Gmail ↗" data-en="Open Gmail ↗">Abrir Gmail ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
-                            <h4>10. Gemini en Google Docs</h4>
-                            <p>Puede ayudar a redactar, resumir, corregir y organizar documentos con funciones
-                                disponibles en Google Workspace.</p>
-                            <a href="https://docs.google.com/" target="_blank" rel="noopener">Abrir Documentos ↗</a>
+                            <h4 data-es="10. Gemini en Google Docs" data-en="10. Gemini in Google Docs">10. Gemini en Google Docs</h4>
+                            <p data-es="Puede ayudar a redactar, resumir, corregir y organizar documentos con funciones disponibles en Google Workspace." data-en="Can help write, summarize, edit, and organize documents using available Google Workspace features.">Puede ayudar a redactar, resumir, corregir y organizar documentos con funciones disponibles en Google Workspace.</p>
+                            <a href="https://docs.google.com/" target="_blank" rel="noopener" data-es="Abrir Documentos ↗" data-en="Open Google Docs ↗">Abrir Documentos ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
-                            <h4>11. Gemini en Google Slides</h4>
-                            <p>Ayuda a preparar presentaciones, desarrollar ideas y crear contenido visual con las
-                                funciones compatibles de Workspace.</p>
-                            <a href="https://slides.google.com/" target="_blank" rel="noopener">Abrir Presentaciones
-                                ↗</a>
+                            <h4 data-es="11. Gemini en Google Slides" data-en="11. Gemini in Google Slides">11. Gemini en Google Slides</h4>
+                            <p data-es="Ayuda a preparar presentaciones, desarrollar ideas y crear contenido visual con las funciones compatibles de Workspace." data-en="Helps prepare presentations, develop ideas, and create visual content with supported Workspace features.">Ayuda a preparar presentaciones, desarrollar ideas y crear contenido visual con las funciones compatibles de Workspace.</p>
+                            <a href="https://slides.google.com/" target="_blank" rel="noopener" data-es="Abrir Presentaciones ↗" data-en="Open Google Slides ↗">Abrir Presentaciones ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
-                            <h4>12. Gemini en Google Meet</h4>
-                            <p>Ofrece funciones asistidas por IA para reuniones, como tomar notas o ayudar con tareas,
-                                dependiendo del plan.</p>
-                            <a href="https://meet.google.com/" target="_blank" rel="noopener">Abrir Google Meet ↗</a>
+                            <h4 data-es="12. Gemini en Google Meet" data-en="12. Gemini in Google Meet">12. Gemini en Google Meet</h4>
+                            <p data-es="Ofrece funciones asistidas por IA para reuniones, como tomar notas o ayudar con tareas, dependiendo del plan." data-en="Offers AI-assisted meeting features, such as taking notes or helping with tasks, depending on the plan.">Ofrece funciones asistidas por IA para reuniones, como tomar notas o ayudar con tareas, dependiendo del plan.</p>
+                            <a href="https://meet.google.com/" target="_blank" rel="noopener" data-es="Abrir Google Meet ↗" data-en="Open Google Meet ↗">Abrir Google Meet ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
                             <h4>13. Google Cloud Speech-to-Text</h4>
-                            <p>Convierte audio y voz en texto mediante reconocimiento automático del habla.</p>
-                            <a href="https://cloud.google.com/speech-to-text" target="_blank" rel="noopener">Explorar
-                                Speech-to-Text ↗</a>
+                            <p data-es="Convierte audio y voz en texto mediante reconocimiento automático del habla." data-en="Converts audio and speech into text using automatic speech recognition.">Convierte audio y voz en texto mediante reconocimiento automático del habla.</p>
+                            <a href="https://cloud.google.com/speech-to-text" target="_blank" rel="noopener" data-es="Explorar Speech-to-Text ↗" data-en="Explore Speech-to-Text ↗">Explorar Speech-to-Text ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
                             <h4>14. Google Cloud Text-to-Speech</h4>
-                            <p>Convierte texto escrito en voz sintética para aplicaciones, asistentes y otros proyectos.
-                            </p>
-                            <a href="https://cloud.google.com/text-to-speech" target="_blank" rel="noopener">Explorar
-                                Text-to-Speech ↗</a>
+                            <p data-es="Convierte texto escrito en voz sintética para aplicaciones, asistentes y otros proyectos." data-en="Converts written text into synthesized speech for applications, assistants, and other projects.">Convierte texto escrito en voz sintética para aplicaciones, asistentes y otros proyectos.</p>
+                            <a href="https://cloud.google.com/text-to-speech" target="_blank" rel="noopener" data-es="Explorar Text-to-Speech ↗" data-en="Explore Text-to-Speech ↗">Explorar Text-to-Speech ↗</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-card h-100">
-                            <h4>15. Google Earth con funciones inteligentes</h4>
-                            <p>Permite explorar lugares del planeta mediante imágenes satelitales, mapas y herramientas
-                                de análisis geográfico.</p>
-                            <a href="https://earth.google.com/" target="_blank" rel="noopener">Explorar Google Earth
-                                ↗</a>
+                            <h4 data-es="15. Google Earth con funciones inteligentes" data-en="15. Google Earth with Smart Features">15. Google Earth con funciones inteligentes</h4>
+                            <p data-es="Permite explorar lugares del planeta mediante imágenes satelitales, mapas y herramientas de análisis geográfico." data-en="Allows users to explore places around the world using satellite images, maps, and geographic analysis tools.">Permite explorar lugares del planeta mediante imágenes satelitales, mapas y herramientas de análisis geográfico.</p>
+                            <a href="https://earth.google.com/" target="_blank" rel="noopener" data-es="Explorar Google Earth ↗" data-en="Explore Google Earth ↗">Explorar Google Earth ↗</a>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="tech-demo mt-4">
-                    <h4><i class="bi bi-lightbulb"></i> ¿Cuál te conviene?</h4>
-                    <p>Para estudiar y hacer tareas, puedes comenzar con Gemini y Gemini Notebook. Para programar
-                        aplicaciones, prueba Google AI Studio. Algunas funciones requieren una cuenta, un plan de pago o
-                        acceso habilitado.</p>
+                    <h4><i class="bi bi-lightbulb"></i> <span data-es="¿Cuál te conviene?" data-en="Which One Is Right for You?">¿Cuál te conviene?</span></h4>
+                    <p data-es="Para estudiar y hacer tareas, puedes comenzar con Gemini y NotebookLM. Para programar aplicaciones, prueba Google AI Studio. Algunas funciones requieren una cuenta, un plan de pago o acceso habilitado." data-en="For studying and doing homework, you can start with Gemini and NotebookLM. To develop applications, try Google AI Studio. Some features require an account, a paid plan, or enabled access.">Para estudiar y hacer tareas, puedes comenzar con Gemini y NotebookLM. Para programar aplicaciones, prueba Google AI Studio. Algunas funciones requieren una cuenta, un plan de pago o acceso habilitado.</p>
                 </div>
             </div>
         </div>
@@ -281,18 +188,18 @@
                     <div class="footer-brand">
                         <img src="./assets/logo-pinguino.png" alt="Pingui Store">
                         <strong>Pingui Store ♥</strong>
-                        <p>Productos con mucho amor</p>
+                        <p data-es="Productos con mucho amor" data-en="Products made with lots of love">Productos con mucho amor</p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3 mb-lg-0">
-                    <h6>ENLACES RÁPIDOS</h6>
-                    <a href="./index.html">Inicio</a>
-                    <a href="./tienda.html">Tienda</a>
-                    <a href="./categorias.html">Categorías</a>
-                    <a href="./google-ia.html">IAs de Google</a>
+                    <h6 data-es="ENLACES RÁPIDOS" data-en="QUICK LINKS">ENLACES RÁPIDOS</h6>
+                    <a href="./index.html" data-es="Inicio" data-en="Home">Inicio</a>
+                    <a href="./tienda.html" data-es="Tienda" data-en="Shop">Tienda</a>
+                    <a href="./categorias.html" data-es="Categorías" data-en="Categories">Categorías</a>
+                    <a href="./google-ia.html" data-es="IAs de Google" data-en="Google AI">IAs de Google</a>
                 </div>
                 <div class="col-lg-3 text-lg-end">
-                    <h6>SÍGUENOS</h6>
+                    <h6 data-es="SÍGUENOS" data-en="FOLLOW US">SÍGUENOS</h6>
                     <div class="social-icons">
                         <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
@@ -305,6 +212,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            cambiarIdioma(localStorage.getItem("idiomaPingui") || "es");
+        });
+    </script>
 </body>
-
 </html>

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -19,17 +20,20 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="menu">
                 <ul class="navbar-nav gap-lg-2">
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./tienda.html">Tienda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./categorias.html">Categorías</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="./nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./tienda.html"><span data-es="Tienda" data-en="Shop">Tienda</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./categorias.html"><span data-es="Categorías" data-en="Categories">Categorías</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./nosotros.html"><span data-es="Nosotros" data-en="About Us">Nosotros</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="./javascript.html">JavaScript</a></li>
                     <li class="nav-item"><a class="nav-link" href="./jquery.html">jQuery</a></li>
                     <li class="nav-item"><a class="nav-link" href="./json.html">JSON</a></li>
                     <li class="nav-item"><a class="nav-link" href="./hosting.html">Hosting</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./cuestionario.html">Cuestionario</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./google-ia.html">IAs de Google</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./cuestionario.html"><span data-es="Cuestionario" data-en="Quiz">Cuestionario</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./google-ia.html"><span data-es="IAs de Google" data-en="Google AI">IAs de Google</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacto.html"><span data-es="Contacto" data-en="Contact">Contacto</span></a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <button id="idiomaToggle" class="btn btn-sm btn-outline-primary" type="button" onclick="cambiarIdioma(localStorage.getItem('idiomaPingui') === 'en' ? 'es' : 'en')">🇸🇻 Español</button>
+                    </li>
                 </ul>
             </div>
             <div class="d-flex align-items-center gap-2">
@@ -47,16 +51,18 @@
         <section class="products-section">
             <div class="container">
                 <div class="section-heading">
-                    <span></span><h2>Sobre Pingui Store</h2><span></span>
+                    <span></span>
+                    <h2 data-es="Sobre Pingui Store" data-en="About Pingui Store">Sobre Pingui Store</h2>
+                    <span></span>
                 </div>
 
                 <div class="info-box">
                     <div class="row align-items-center g-4">
                         <div class="col-lg-6">
-                            <h3>¡Bienvenidos a Pingui Store! 🐧</h3>
-                            <p>Somos una tienda inspirada en la ternura de los pingüinos. Nuestro objetivo es ofrecer productos adorables que puedan acompañarte en tu día a día o convertirse en un regalo especial.</p>
-                            <p>Queremos que cada producto transmita alegría, cariño y creatividad. Por eso, nuestra marca combina diseños tiernos con una experiencia de compra sencilla y agradable.</p>
-                            <a href="./tienda.html" class="btn btn-pingui">Conocer productos</a>
+                            <h3 data-es="¡Bienvenidos a Pingui Store! 🐧" data-en="Welcome to Pingui Store! 🐧">¡Bienvenidos a Pingui Store! 🐧</h3>
+                            <p data-es="Somos una tienda inspirada en la ternura de los pingüinos. Nuestro objetivo es ofrecer productos adorables que puedan acompañarte en tu día a día o convertirse en un regalo especial." data-en="We are a store inspired by the cuteness of penguins. Our goal is to offer adorable products that can accompany you in your daily life or become a special gift.">Somos una tienda inspirada en la ternura de los pingüinos. Nuestro objetivo es ofrecer productos adorables que puedan acompañarte en tu día a día o convertirse en un regalo especial.</p>
+                            <p data-es="Queremos que cada producto transmita alegría, cariño y creatividad. Por eso, nuestra marca combina diseños tiernos con una experiencia de compra sencilla y agradable." data-en="We want every product to convey joy, affection, and creativity. That is why our brand combines cute designs with a simple and enjoyable shopping experience.">Queremos que cada producto transmita alegría, cariño y creatividad. Por eso, nuestra marca combina diseños tiernos con una experiencia de compra sencilla y agradable.</p>
+                            <a href="./tienda.html" class="btn btn-pingui" data-es="Conocer productos" data-en="Explore Products">Conocer productos</a>
                         </div>
                         <div class="col-lg-6 text-center">
                             <img src="./assets/logo-pinguino.png" alt="Logo de Pingui Store" class="img-fluid" style="max-height:300px">
@@ -68,33 +74,35 @@
                     <div class="col-md-4">
                         <div class="category-card h-100">
                             <div class="category-circle blue mb-3"><i class="bi bi-heart-fill fs-1"></i></div>
-                            <h3>Nuestra misión</h3>
-                            <p>Compartir ternura a través de productos creativos inspirados en pingüinos.</p>
+                            <h3 data-es="Nuestra misión" data-en="Our Mission">Nuestra misión</h3>
+                            <p data-es="Compartir ternura a través de productos creativos inspirados en pingüinos." data-en="Share cuteness through creative products inspired by penguins.">Compartir ternura a través de productos creativos inspirados en pingüinos.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="category-card h-100">
                             <div class="category-circle yellow mb-3"><i class="bi bi-stars fs-1"></i></div>
-                            <h3>Nuestra visión</h3>
-                            <p>Convertirnos en una marca reconocida por sus diseños adorables y su atención cercana.</p>
+                            <h3 data-es="Nuestra visión" data-en="Our Vision">Nuestra visión</h3>
+                            <p data-es="Convertirnos en una marca reconocida por sus diseños adorables y su atención cercana." data-en="Become a brand known for its adorable designs and friendly customer service.">Convertirnos en una marca reconocida por sus diseños adorables y su atención cercana.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="category-card h-100">
                             <div class="category-circle pink mb-3"><i class="bi bi-emoji-smile-fill fs-1"></i></div>
-                            <h3>Nuestros valores</h3>
-                            <p>Creatividad, amabilidad, responsabilidad y amor por los pequeños detalles.</p>
+                            <h3 data-es="Nuestros valores" data-en="Our Values">Nuestros valores</h3>
+                            <p data-es="Creatividad, amabilidad, responsabilidad y amor por los pequeños detalles." data-en="Creativity, kindness, responsibility, and love for the little details.">Creatividad, amabilidad, responsabilidad y amor por los pequeños detalles.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="info-box mt-4">
                     <div class="section-heading">
-                        <span></span><h2>Atención al cliente</h2><span></span>
+                        <span></span>
+                        <h2 data-es="Atención al cliente" data-en="Customer Service">Atención al cliente</h2>
+                        <span></span>
                     </div>
-                    <p class="text-center">Queremos ayudarte a encontrar el producto ideal. Si tienes dudas sobre nuestros productos, puedes escribirnos mediante el formulario de contacto.</p>
+                    <p class="text-center" data-es="Queremos ayudarte a encontrar el producto ideal. Si tienes dudas sobre nuestros productos, puedes escribirnos mediante el formulario de contacto." data-en="We want to help you find the perfect product. If you have questions about our products, you can contact us using the contact form.">Queremos ayudarte a encontrar el producto ideal. Si tienes dudas sobre nuestros productos, puedes escribirnos mediante el formulario de contacto.</p>
                     <div class="text-center">
-                        <a href="./contacto.html" class="btn btn-pingui"><i class="bi bi-chat-heart me-2"></i>Contactar</a>
+                        <a href="./contacto.html" class="btn btn-pingui"><i class="bi bi-chat-heart me-2"></i><span data-es="Contactar" data-en="Contact Us">Contactar</span></a>
                     </div>
                 </div>
             </div>
@@ -108,18 +116,18 @@
                     <div class="footer-brand">
                         <img src="./assets/logo-pinguino.png" alt="Pingui Store">
                         <strong>Pingui Store ♥</strong>
-                        <p>Productos con mucho amor</p>
+                        <p data-es="Productos con mucho amor" data-en="Products made with lots of love">Productos con mucho amor</p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3 mb-lg-0">
-                    <h6>ENLACES RÁPIDOS</h6>
-                    <a href="./index.html">Inicio</a>
-                    <a href="./tienda.html">Tienda</a>
-                    <a href="./categorias.html">Categorías</a>
-                    <a href="./google-ia.html">IAs de Google</a>
+                    <h6 data-es="ENLACES RÁPIDOS" data-en="QUICK LINKS">ENLACES RÁPIDOS</h6>
+                    <a href="./index.html" data-es="Inicio" data-en="Home">Inicio</a>
+                    <a href="./tienda.html" data-es="Tienda" data-en="Shop">Tienda</a>
+                    <a href="./categorias.html" data-es="Categorías" data-en="Categories">Categorías</a>
+                    <a href="./google-ia.html" data-es="IAs de Google" data-en="Google AI">IAs de Google</a>
                 </div>
                 <div class="col-lg-3 text-lg-end">
-                    <h6>SÍGUENOS</h6>
+                    <h6 data-es="SÍGUENOS" data-en="FOLLOW US">SÍGUENOS</h6>
                     <div class="social-icons">
                         <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>

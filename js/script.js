@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".nav-link[data-page]");
   const pages = document.querySelectorAll(".page");
@@ -6,21 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", event => {
       const page = link.dataset.page;
       const target = document.querySelector(`.page[data-page="${page}"]`);
-
       if (!target) return;
 
       event.preventDefault();
       links.forEach(item => item.classList.remove("active"));
       link.classList.add("active");
-
       pages.forEach(section => section.classList.remove("active"));
       target.classList.add("active");
-
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   });
 
-  const cartCount = document.querySelector(".cart-icon span");
   let cart = JSON.parse(localStorage.getItem("pinguiCart") || "[]");
 
   function actualizarCarrito() {
@@ -48,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       actualizarCarrito();
+
       const textoOriginal = button.innerHTML;
       button.innerHTML = '<i class="bi bi-check-lg"></i> Agregado';
       button.disabled = true;
@@ -114,7 +112,11 @@ document.addEventListener("DOMContentLoaded", () => {
       themeButton.innerHTML = oscuro
         ? '<i class="bi bi-sun"></i>'
         : '<i class="bi bi-moon"></i>';
-      themeButton.setAttribute("aria-label", oscuro ? "Activar modo claro" : "Activar modo oscuro");
+
+      themeButton.setAttribute(
+        "aria-label",
+        oscuro ? "Activar modo claro" : "Activar modo oscuro"
+      );
     }
   }
 
@@ -147,11 +149,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       const resultado = document.getElementById("quizResultado");
+
       if (resultado) {
         resultado.textContent = `Obtuviste ${puntos} de 10 puntos. ${puntos === 10 ? "¡Excelente! 🐧" :
-            puntos >= 7 ? "¡Muy bien! Sigue practicando." :
-              "¡Sigue estudiando, puedes mejorar!"
+          puntos >= 7 ? "¡Muy bien! Sigue practicando." :
+            "¡Sigue estudiando, puedes mejorar!"
           }`;
+
         resultado.style.display = "block";
         resultado.scrollIntoView({ behavior: "smooth", block: "center" });
       }
@@ -159,6 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     quizForm.addEventListener("reset", () => {
       const resultado = document.getElementById("quizResultado");
+
       if (resultado) {
         resultado.textContent = "";
         resultado.style.display = "none";
@@ -168,6 +173,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const resultadoAnterior = document.getElementById("resultado");
   if (resultadoAnterior) resultadoAnterior.style.display = "none";
+
+  // Idioma español/inglés
+  cambiarIdioma(localStorage.getItem("idiomaPingui") || "es");
 });
 
 function mostrarProducto() {
@@ -222,6 +230,9 @@ function calificar() {
   resultado.style.background = puntos >= 6 ? "#dff8e8" : "#ffe3e3";
   resultado.scrollIntoView({ behavior: "smooth", block: "center" });
 }
+
+// Cambiar idioma usando el toggle
+
 function cambiarIdioma(idioma) {
   document.documentElement.lang = idioma;
 
@@ -231,10 +242,14 @@ function cambiarIdioma(idioma) {
 
   localStorage.setItem("idiomaPingui", idioma);
 
-  const selector = document.getElementById("selectorIdioma");
-  if (selector) selector.value = idioma;
+  const boton = document.getElementById("idiomaToggle");
+  if (boton) {
+    boton.textContent = idioma === "es" ? "🇸🇻 Español" : "🇺🇸 English";
+    boton.setAttribute("aria-label", idioma === "es" ? "Cambiar a inglés" : "Switch to Spanish");
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   cambiarIdioma(localStorage.getItem("idiomaPingui") || "es");
 });
+
