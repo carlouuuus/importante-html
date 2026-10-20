@@ -253,3 +253,23 @@ document.addEventListener("DOMContentLoaded", () => {
   cambiarIdioma(localStorage.getItem("idiomaPingui") || "es");
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.getElementById('carruselProductos');
+  if (!track) return;
+
+  const prev = document.querySelector('.carrusel-btn.prev');
+  const next = document.querySelector('.carrusel-btn.next');
+  const paso = () => track.querySelector('.product-card').offsetWidth + 16;
+
+  prev.addEventListener('click', () => track.scrollBy({ left: -paso(), behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: paso(), behavior: 'smooth' }));
+
+  function avanzar() {
+    const fin = track.scrollLeft + track.clientWidth >= track.scrollWidth - 5;
+    fin ? track.scrollTo({ left: 0, behavior: 'smooth' })
+        : track.scrollBy({ left: paso(), behavior: 'smooth' });
+  }
+  let auto = setInterval(avanzar, 4000);
+  track.addEventListener('mouseenter', () => clearInterval(auto));
+  track.addEventListener('mouseleave', () => auto = setInterval(avanzar, 4000));
+});
