@@ -1,6 +1,6 @@
-
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,13 +9,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-pingui">
         <div class="container">
             <a class="navbar-brand" href="./index.html">
                 <img src="./assets/logo-pinguino.png" alt="Pingui Store" class="logo-pingui">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="menu">
@@ -55,17 +57,20 @@
             <form id="formContacto">
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" maxlength="100" required placeholder="Escribe tu nombre">
+                    <input type="text" class="form-control" id="nombre" name="nombre" maxlength="100" required
+                        placeholder="Escribe tu nombre">
                 </div>
 
                 <div class="mb-3">
                     <label for="correo" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="correo" name="correo" maxlength="254" required placeholder="tucorreo@ejemplo.com">
+                    <input type="email" class="form-control" id="correo" name="correo" maxlength="254" required
+                        placeholder="tucorreo@ejemplo.com">
                 </div>
 
                 <div class="mb-3">
                     <label for="mensaje" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" name="mensaje" rows="5" maxlength="2000" required placeholder="Escribe tu mensaje..."></textarea>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="5" maxlength="2000" required
+                        placeholder="Escribe tu mensaje..."></textarea>
                 </div>
 
                 <button type="submit" id="btnEnviar" class="btn btn-pingui w-100">
@@ -86,85 +91,86 @@
         </div>
     </footer>
 
-    
-<script>
-const DISCORD_WEBHOOK_URL = "PEGA_AQUI_LA_URL_DEL_NUEVO_WEBHOOK";
 
-document.getElementById("formContacto").addEventListener("submit", async function(e) {
-    e.preventDefault();
+    <script>
+        const DISCORD_WEBHOOK_URL = "PEGA_AQUI_LA_URL_DEL_NUEVO_WEBHOOK";
 
-    const formulario = this;
-    const boton = document.getElementById("btnEnviar");
-    const estado = document.getElementById("estadoEnvio");
+        document.getElementById("formContacto").addEventListener("submit", async function (e) {
+            e.preventDefault();
 
-    const nombre = document.getElementById("nombre").value.trim();
-    const correo = document.getElementById("correo").value.trim();
-    const mensaje = document.getElementById("mensaje").value.trim();
+            const formulario = this;
+            const boton = document.getElementById("btnEnviar");
+            const estado = document.getElementById("estadoEnvio");
 
-    if (!nombre || !correo || !mensaje) {
-        estado.textContent = "Completa todos los campos.";
-        return;
-    }
+            const nombre = document.getElementById("nombre").value.trim();
+            const correo = document.getElementById("correo").value.trim();
+            const mensaje = document.getElementById("mensaje").value.trim();
 
-    if (DISCORD_WEBHOOK_URL === "https://discord.com/api/webhooks/1562198235878133950/_2oQTSHyfRCqIUE2nyELnD7IhF8rpq59zygjbHhBIVh4MP7WeW7ch7HfEq2BrIhYv9vu") {
-        estado.textContent = "Configura el webhook de Discord antes de enviar.";
-        return;
-    }
+            if (!nombre || !correo || !mensaje) {
+                estado.textContent = "Completa todos los campos.";
+                return;
+            }
 
-    boton.disabled = true;
-    boton.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Enviando...';
-    estado.textContent = "Enviando mensaje a Pingui Store...";
+            if (DISCORD_WEBHOOK_URL === "https://discord.com/api/webhooks/1562198235878133950/_2oQTSHyfRCqIUE2nyELnD7IhF8rpq59zygjbHhBIVh4MP7WeW7ch7HfEq2BrIhYv9vu") {
+                estado.textContent = "Configura el webhook de Discord antes de enviar.";
+                return;
+            }
 
-    try {
-        const respuesta = await fetch(DISCORD_WEBHOOK_URL, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                username: "Pingui Store | Contacto",
-                embeds: [{
-                    title: "📩 Nuevo mensaje de contacto",
-                    color: 1530104,
-                    fields: [
-                        {
-                            name: "👤 Nombre",
-                            value: nombre.slice(0, 100),
-                            inline: true
-                        },
-                        {
-                            name: "📧 Correo electrónico",
-                            value: correo.slice(0, 254),
-                            inline: true
-                        },
-                        {
-                            name: "💬 Mensaje",
-                            value: mensaje.slice(0, 2000)
-                        }
-                    ],
-                    footer: {
-                        text: "Formulario de contacto de Pingui Store 🐧"
+            boton.disabled = true;
+            boton.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Enviando...';
+            estado.textContent = "Enviando mensaje a Pingui Store...";
+
+            try {
+                const respuesta = await fetch(DISCORD_WEBHOOK_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
                     },
-                    timestamp: new Date().toISOString()
-                }]
-            })
+                    body: JSON.stringify({
+                        username: "Pingui Store | Contacto",
+                        embeds: [{
+                            title: "📩 Nuevo mensaje de contacto",
+                            color: 1530104,
+                            fields: [
+                                {
+                                    name: "👤 Nombre",
+                                    value: nombre.slice(0, 100),
+                                    inline: true
+                                },
+                                {
+                                    name: "📧 Correo electrónico",
+                                    value: correo.slice(0, 254),
+                                    inline: true
+                                },
+                                {
+                                    name: "💬 Mensaje",
+                                    value: mensaje.slice(0, 2000)
+                                }
+                            ],
+                            footer: {
+                                text: "Formulario de contacto de Pingui Store 🐧"
+                            },
+                            timestamp: new Date().toISOString()
+                        }]
+                    })
+                });
+
+                if (!respuesta.ok) {
+                    throw new Error("Discord respondió con el código " + respuesta.status);
+                }
+
+                estado.textContent = "¡Mensaje enviado correctamente! 💙";
+                formulario.reset();
+            } catch (error) {
+                console.error("Error al enviar:", error);
+                estado.textContent = "No se pudo enviar el mensaje. Revisa el webhook y la conexión.";
+            } finally {
+                boton.disabled = false;
+                boton.innerHTML = '<i class="bi bi-send"></i> Enviar mensaje';
+            }
         });
-
-        if (!respuesta.ok) {
-            throw new Error("Discord respondió con el código " + respuesta.status);
-        }
-
-        estado.textContent = "¡Mensaje enviado correctamente! 💙";
-        formulario.reset();
-    } catch (error) {
-        console.error("Error al enviar:", error);
-        estado.textContent = "No se pudo enviar el mensaje. Revisa el webhook y la conexión.";
-    } finally {
-        boton.disabled = false;
-        boton.innerHTML = '<i class="bi bi-send"></i> Enviar mensaje';
-    }
-});
-</script>
+    </script>
 
 </body>
-</html> 
+
+</html>
