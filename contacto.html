@@ -13,13 +13,11 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-pingui">
         <div class="container">
-            <a class="navbar-brand" href="./index.html">
-                <img src="./assets/logo-pinguino.png" alt="Pingui Store" class="logo-pingui">
-            </a>
+            <a class="navbar-brand" href="./index.html"><img src="./assets/logo-pinguino.png" alt="Pingui Store"
+                    class="logo-pingui"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-                aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span
+                    class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse justify-content-center" id="menu">
                 <ul class="navbar-nav gap-lg-2">
                     <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
@@ -36,16 +34,13 @@
                 </ul>
             </div>
             <div class="d-flex align-items-center gap-2">
-                <button id="themeToggle" class="theme-btn" type="button" title="Cambiar tema" aria-label="Cambiar tema">
-                    <i class="bi bi-moon"></i>
-                </button>
-                <a href="./tienda.html" class="nav-icon cart-icon" aria-label="Ir a la tienda">
-                    <i class="bi bi-cart3"></i><span>0</span>
-                </a>
+                <button id="themeToggle" class="theme-btn" type="button" title="Cambiar tema"
+                    aria-label="Cambiar tema"><i class="bi bi-moon"></i></button>
+                <a href="./tienda.html" class="nav-icon cart-icon" aria-label="Ir a la tienda"><i
+                        class="bi bi-cart3"></i><span>0</span></a>
             </div>
         </div>
     </nav>
-
     <main class="container py-5" style="max-width:850px;padding-top:120px!important">
         <section class="category-card">
             <div class="text-center mb-4">
@@ -53,124 +48,100 @@
                 <h1 class="mt-2">¡Contáctanos! 🐧</h1>
                 <p>¿Tienes alguna pregunta o sugerencia? Nos encantará ayudarte.</p>
             </div>
-
             <form id="formContacto">
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" maxlength="100" required
                         placeholder="Escribe tu nombre">
                 </div>
-
                 <div class="mb-3">
                     <label for="correo" class="form-label">Correo electrónico</label>
                     <input type="email" class="form-control" id="correo" name="correo" maxlength="254" required
                         placeholder="tucorreo@ejemplo.com">
                 </div>
-
                 <div class="mb-3">
                     <label for="mensaje" class="form-label">Mensaje</label>
                     <textarea class="form-control" id="mensaje" name="mensaje" rows="5" maxlength="2000" required
                         placeholder="Escribe tu mensaje..."></textarea>
                 </div>
-
-                <button type="submit" id="btnEnviar" class="btn btn-pingui w-100">
-                    <i class="bi bi-send"></i> Enviar mensaje
-                </button>
+                <button type="submit" id="btnEnviar" class="btn btn-pingui w-100"><i class="bi bi-send"></i> Enviar
+                    mensaje</button>
                 <p id="estadoEnvio" class="text-center mt-3" role="status" aria-live="polite"></p>
             </form>
         </section>
     </main>
-
     <footer class="footer-pingui">
         <div class="container text-center">
             <strong>Pingui Store ♥</strong>
             <p>Productos con mucho amor 🐧</p>
-            <a href="./index.html">Inicio</a> |
-            <a href="./tienda.html">Tienda</a> |
-            <a href="./contacto.html">Contacto</a>
+            <a href="./index.html">Inicio</a> | <a href="./tienda.html">Tienda</a> | <a
+                href="./contacto.html">Contacto</a>
         </div>
     </footer>
 
-
     <script>
-        const DISCORD_WEBHOOK_URL = "PEGA_AQUI_LA_URL_DEL_NUEVO_WEBHOOK";
+const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1562196165783461959/tsr6J9sNw1hY_uUuuDhxe6tl7NNFhlUKyjbGxPs7q0QbQZP4yK1kcvOG3E95i9p6JgA4";
 
-        document.getElementById("formContacto").addEventListener("submit", async function (e) {
-            e.preventDefault();
+document.getElementById("formContacto").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const formulario = this;
+    const boton = document.getElementById("btnEnviar");
+    const estado = document.getElementById("estadoEnvio");
+    const nombre = document.getElementById("nombre").value.trim();
+    const correo = document.getElementById("correo").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
 
-            const formulario = this;
-            const boton = document.getElementById("btnEnviar");
-            const estado = document.getElementById("estadoEnvio");
+    if (!nombre || !correo || !mensaje) {
+        estado.textContent = "Completa todos los campos.";
+        return;
+    }
 
-            const nombre = document.getElementById("nombre").value.trim();
-            const correo = document.getElementById("correo").value.trim();
-            const mensaje = document.getElementById("mensaje").value.trim();
+    boton.disabled = true;
+    boton.textContent = "Enviando...";
+    estado.textContent = "";
 
-            if (!nombre || !correo || !mensaje) {
-                estado.textContent = "Completa todos los campos.";
-                return;
-            }
-
-            if (DISCORD_WEBHOOK_URL === "https://discord.com/api/webhooks/1562198235878133950/_2oQTSHyfRCqIUE2nyELnD7IhF8rpq59zygjbHhBIVh4MP7WeW7ch7HfEq2BrIhYv9vu") {
-                estado.textContent = "Configura el webhook de Discord antes de enviar.";
-                return;
-            }
-
-            boton.disabled = true;
-            boton.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Enviando...';
-            estado.textContent = "Enviando mensaje a Pingui Store...";
-
-            try {
-                const respuesta = await fetch(DISCORD_WEBHOOK_URL, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
+    try {
+        const respuesta = await fetch(DISCORD_WEBHOOK_URL + "?wait=true", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                username: "Pingui Store | Contacto",
+                embeds: [{
+                    title: "📩 Nuevo mensaje de contacto",
+                    color: 1530104,
+                    fields: [
+                        { name: "👤 Nombre", value: nombre.slice(0, 100), inline: true },
+                        { name: "📧 Correo electrónico", value: correo.slice(0, 254), inline: true },
+                        { name: "💬 Mensaje", value: mensaje.slice(0, 2000) }
+                    ],
+                    footer: {
+                        text: "Formulario de contacto de Pingui Store 🐧"
                     },
-                    body: JSON.stringify({
-                        username: "Pingui Store | Contacto",
-                        embeds: [{
-                            title: "📩 Nuevo mensaje de contacto",
-                            color: 1530104,
-                            fields: [
-                                {
-                                    name: "👤 Nombre",
-                                    value: nombre.slice(0, 100),
-                                    inline: true
-                                },
-                                {
-                                    name: "📧 Correo electrónico",
-                                    value: correo.slice(0, 254),
-                                    inline: true
-                                },
-                                {
-                                    name: "💬 Mensaje",
-                                    value: mensaje.slice(0, 2000)
-                                }
-                            ],
-                            footer: {
-                                text: "Formulario de contacto de Pingui Store 🐧"
-                            },
-                            timestamp: new Date().toISOString()
-                        }]
-                    })
-                });
-
-                if (!respuesta.ok) {
-                    throw new Error("Discord respondió con el código " + respuesta.status);
-                }
-
-                estado.textContent = "¡Mensaje enviado correctamente! 💙";
-                formulario.reset();
-            } catch (error) {
-                console.error("Error al enviar:", error);
-                estado.textContent = "No se pudo enviar el mensaje. Revisa el webhook y la conexión.";
-            } finally {
-                boton.disabled = false;
-                boton.innerHTML = '<i class="bi bi-send"></i> Enviar mensaje';
-            }
+                    timestamp: new Date().toISOString()
+                }]
+            })
         });
-    </script>
 
+        if (!respuesta.ok) {
+            const detalle = await respuesta.text();
+            throw new Error("HTTP " + respuesta.status + ": " + detalle);
+        }
+
+        estado.textContent = "¡Mensaje enviado correctamente a Discord! 💙";
+        formulario.reset();
+    } catch (error) {
+        console.error("Error al enviar:", error);
+        estado.textContent = error.message.includes("Failed to fetch")
+            ? "Error CORS: Discord bloqueó la solicitud del navegador. Necesitas un backend o proxy."
+            : "Discord rechazó la solicitud. Revisa la consola para ver el detalle.";
+    } finally {
+        boton.disabled = false;
+        boton.innerHTML = '<i class="bi bi-send"></i> Enviar mensaje';
+    }
+});
+</script>
 </body>
 
 </html>
