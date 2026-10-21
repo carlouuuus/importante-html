@@ -922,3 +922,46 @@ select {
         font-size: 22px
     }
 }
+html {
+    min-height: 100%;
+    background: var(--fondo, #f4f7fb);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--fondo, #f4f7fb);
+}
+
+main {
+    flex: 1;
+}
+
+.footer-pingui {
+    margin-top: 0;
+    flex-shrink: 0;
+}
+.cart-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-icon .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #2ec4b6;
+    color: white;
+    font-size: 11px;
+    line-height: 1;
+}

@@ -85,7 +85,7 @@ app.post("/api/contact", async (req, res) => {
             });
         }
 
-        const discordResponse = await fetch(DISCORD_WEBHOOK_URL, {
+        const discordResponse = await fetch(ISCORD_WEBHOOK_URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -145,9 +145,9 @@ app.post("/api/contact", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "contacto.html"));
 });
 
 app.listen(PORT, () => {
     console.log(`Pingui Store disponible en http://localhost:${PORT}`);
-});
+});const WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
