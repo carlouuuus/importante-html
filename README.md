@@ -37,7 +37,11 @@ El logotipo representa la identidad de Pingui Store mediante la figura de un pin
 
 **Demostración del carrusel de productos con Bootstrap:**
 
-![Carrusel de productos de Pingui Store](./assets/carousel-demo.png)
+![Carrusel de productos de Pingui Store](./assets/peluche.png)
+![Carrusel de productos de Pingui Store](./assets/corazon.png)
+![Carrusel de productos de Pingui Store](./assets/llavero-pinguino.png)
+![Carrusel de productos de Pingui Store](./assets/mochila.png)
+![Carrusel de productos de Pingui Store](./assets/taza.png)
 
 El carrusel de Bootstrap permite mostrar diferentes productos en varias diapositivas. Cuenta con controles de navegación e indicadores que facilitan recorrer los artículos de la tienda. Su diseño ayuda a presentar los productos de forma ordenada y atractiva.
 
