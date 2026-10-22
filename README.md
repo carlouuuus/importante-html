@@ -3,7 +3,7 @@
 **Estudiante:** [Carlos Andres Galdamez Cordova]  
 **Fecha:** 22 de octubre de 2026  
 **Enlace al Sitio Web (Vercel):** [https://importante-html-sqeo.vercel.app/]  
-**Repositorio GitHub:** [Pega aquí el enlace real de tu repositorio]
+**Repositorio GitHub:** [https://github.com/carlouuuus/importante-html]
 
 ---
 
