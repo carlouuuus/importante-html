@@ -197,8 +197,8 @@ La siguiente tabla resume los criterios establecidos en la guía del proyecto.
 
 Para realizar la entrega formal del proyecto en Google Classroom, se deben adjuntar los siguientes dos enlaces:
 
-1. **Sitio web publicado en Vercel:** [Pegar aquí la URL pública real de Pingui Store].
-2. **Repositorio público en GitHub:** [Pegar aquí la URL real del repositorio].
+1. **Sitio web publicado en Vercel:** [https://importante-html-2q2s.vercel.app/index.htm].
+2. **Repositorio público en GitHub:** [https://github.com/carlouuuus/importante-html].
 
 Antes de entregar, es necesario verificar que el sitio web esté accesible, que el repositorio sea público, que el archivo `README.md` incluya la documentación y las cinco capturas solicitadas, y que las funciones descritas estén comprobadas.
 
