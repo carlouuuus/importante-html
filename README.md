@@ -154,7 +154,6 @@ En esta sección se presentan las cinco evidencias solicitadas para demostrar el
 **Descripción:** Captura de la página principal del repositorio público de GitHub donde se observa la organización de los archivos y carpetas principales del proyecto.
 
 ![Anexo 5: Repositorio de GitHub](./assets/anexo-5-github.png)
-![Anexo 5: Repositorio de GitHub](./assets/github.png)
 
 **Nota:** Las imágenes anteriores son referencias a los archivos que deben guardarse en la carpeta `assets`. Para que aparezcan correctamente en GitHub, es necesario crear las capturas reales, guardarlas con esos nombres o modificar las rutas para que coincidan con los nombres utilizados.
 
