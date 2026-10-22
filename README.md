@@ -2,7 +2,7 @@
 
 **Estudiante:** [Carlos Andres Galdamez Cordova]  
 **Fecha:** 22 de octubre de 2026  
-**Enlace al Sitio Web (Vercel):** [https://importante-html-sqeo.vercel./]  
+**Enlace al Sitio Web (Vercel):** [https://importante-html-sqeo.vercel.app/index.html]  
 **Repositorio GitHub:** [https://github.com/carlappouuuus/importante-html]
 
 ---
@@ -137,7 +137,7 @@ En esta sección se presentan las cinco evidencias solicitadas para demostrar el
 
 **Descripción:** Captura del sitio web en vista móvil mediante las herramientas de desarrollador del navegador. Debe mostrar cómo se adaptan el menú de navegación, las tarjetas y la distribución de los elementos a una pantalla pequeña.
 
-![Anexo 3: Diseño responsive](./assets/anexo-3-responsive.png)
+![Anexo 3: Diseño responsive](./assets/anexo-3-responsive.jpeg)
 
 ### 📸 Anexo 4. Cuestionario interactivo en funcionamiento
 
