@@ -2,7 +2,7 @@
 
 **Estudiante:** [Carlos Andres Galdamez Cordova]  
 **Fecha:** 22 de octubre de 2026  
-**Enlace al Sitio Web (Vercel):** [https://importante-html-2q2-git-47b9f1-andrescarlosgal10-7255s-projects.vercel.app/]  
+**Enlace al Sitio Web (Vercel):** [https://importante-html-2q2s.vercel.app/]  
 **Repositorio GitHub:** [https://github.com/carlouuuus/importante-html]
 
 ---
@@ -197,7 +197,7 @@ La siguiente tabla resume los criterios establecidos en la guía del proyecto.
 
 Para realizar la entrega formal del proyecto en Google Classroom, se deben adjuntar los siguientes dos enlaces:
 
-1. **Sitio web publicado en Vercel:** [https://importante-html-2q2-git-47b9f1-andrescarlosgal10-7255s-projects.vercel.app/].
+1. **Sitio web publicado en Vercel:** [https://importante-html-2q2s.vercel.app/].
 2. **Repositorio público en GitHub:** [https://github.com/carlouuuus/importante-html].
 
 Antes de entregar, es necesario verificar que el sitio web esté accesible, que el repositorio sea público, que el archivo `README.md` incluya la documentación y las cinco capturas solicitadas, y que las funciones descritas estén comprobadas.
