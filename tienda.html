@@ -1,78 +1,139 @@
 
 <!doctype html>
 <html lang="es">
-<section class="products-section py-5">
-    <div class="container">
-        <div class="section-heading">
-            <span></span>
-            <h2 data-es="Nuestros productos" data-en="Our Products">Nuestros productos</h2>
-            <span></span>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="product-card h-100">
-                    <div class="product-image">
-                        <img src="./assets/productos/peluche.png"
-                             alt="Peluche Pingüino"
-                             class="img-fluid"
-                             onerror="this.style.display='none'">
-                    </div>
-                    <div class="p-3">
-                        <h3>Peluche Pingüino</h3>
-                        <p>Un adorable compañero para regalar.</p>
-                        <p class="fw-bold">$12.99</p>
-                        <button class="btn btn-pingui btn-cart"
-                                type="button"
-                                onclick="agregarAlCarrito('Peluche Pingüino', 12.99)">
-                            Agregar al carrito
-                        </button>
-                    </div>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pingui Store - Ternura en cada producto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-pingui">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/logo-pinguino.png" alt="Pingui Store" class="logo-pingui">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="menu">
+                <ul class="navbar-nav gap-lg-2">
+                    <li class="nav-item"><a class="nav-link active" href="./index.html"><span data-es="Inicio" data-en="Home">Inicio</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./tienda.html"><span data-es="Tienda" data-en="Shop">Tienda</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./categorias.html"><span data-es="Categorías" data-en="Categories">Categorías</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./nosotros.html"><span data-es="Nosotros" data-en="About Us">Nosotros</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./javascript.html">JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./jquery.html">jQuery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./json.html">JSON</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./hosting.html">Hosting</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./cuestionario.html"><span data-es="Cuestionario" data-en="Quiz">Cuestionario</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./google-ia.html"><span data-es="IAs de Google" data-en="Google AI">IAs de Google</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacto.html"><span data-es="Contacto" data-en="Contact">Contacto</span></a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <button id="idiomaToggle" class="btn btn-sm btn-outline-primary" type="button" onclick="cambiarIdioma(localStorage.getItem('idiomaPingui') === 'en' ? 'es' : 'en')">🇸🇻 Español</button>
+                    </li>
+                </ul>
             </div>
-
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="product-card h-100">
-                    <div class="product-image">
-                        <img src="./assets/productos/taza.png"
-                             alt="Taza Pingüino"
-                             class="img-fluid"
-                             onerror="this.style.display='none'">
-                    </div>
-                    <div class="p-3">
-                        <h3>Taza Pingüino</h3>
-                        <p>Una taza inspirada en pingüinos.</p>
-                        <p class="fw-bold">$8.99</p>
-                        <button class="btn btn-pingui btn-cart"
-                                type="button"
-                                onclick="agregarAlCarrito('Taza Pingüino', 8.99)">
-                            Agregar al carrito
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="product-card h-100">
-                    <div class="product-image">
-                        <img src="./assets/productos/mochila.png"
-                             alt="Mochila Pingüino"
-                             class="img-fluid"
-                             onerror="this.style.display='none'">
-                    </div>
-                    <div class="p-3">
-                        <h3>Mochila Pingüino</h3>
-                        <p>Una mochila para llevar tus cosas.</p>
-                        <p class="fw-bold">$24.99</p>
-                        <button class="btn btn-pingui btn-cart"
-                                type="button"
-                                onclick="agregarAlCarrito('Mochila Pingüino', 24.99)">
-                            Agregar al carrito
-                        </button>
-                    </div>
-                </div>
+            <div class="d-flex align-items-center gap-2">
+                <button id="themeToggle" class="theme-btn" type="button" title="Cambiar tema" aria-label="Cambiar tema">
+                    <i class="bi bi-moon"></i>
+                </button>
+                <a href="./tienda.html" class="nav-icon cart-icon" aria-label="Ir a la tienda">
+                    <i class="bi bi-cart3"></i>
+                    <span class="cart-count">0</span>
+                </a>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-box">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 hero-text">
+                            <h1><span data-es="Tu tienda de" data-en="Your store for">Tu tienda de</span><br><span data-es="productos pingüinos" data-en="penguin products">productos pingüinos</span> 💙</h1>
+                            <p data-es="Ternura, estilo y mucho pingüinito en un solo lugar." data-en="Cuteness, style, and lots of penguins in one place.">Ternura, estilo y mucho pingüinito en un solo lugar.</p>
+                            <a href="./tienda.html" class="btn btn-pingui"><span data-es="Ver productos" data-en="View products">Ver productos</span> <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <img src="./assets/logo-pinguino.png" class="img-fluid hero-penguin" alt="Pingüino Pingui Store">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span></span>
+                    <h2 data-es="Explora Pingui Store" data-en="Explore Pingui Store">Explora Pingui Store</h2>
+                    <span></span>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="category-card h-100">
+                            <div class="category-circle blue mb-3"><i class="bi bi-bag-heart fs-1"></i></div>
+                            <h3 data-es="Productos" data-en="Products">Productos</h3>
+                            <p data-es="Encuentra artículos adorables inspirados en pingüinos." data-en="Find adorable items inspired by penguins.">Encuentra artículos adorables inspirados en pingüinos.</p>
+                            <a href="./tienda.html" class="btn btn-pingui" data-es="Ver tienda" data-en="Visit store">Ver tienda</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="category-card h-100">
+                            <div class="category-circle yellow mb-3"><i class="bi bi-grid fs-1"></i></div>
+                            <h3 data-es="Categorías" data-en="Categories">Categorías</h3>
+                            <p data-es="Explora los diferentes tipos de productos disponibles." data-en="Explore the different types of products available.">Explora los diferentes tipos de productos disponibles.</p>
+                            <a href="./categorias.html" class="btn btn-pingui" data-es="Explorar" data-en="Explore">Explorar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="category-card h-100">
+                            <div class="category-circle pink mb-3"><i class="bi bi-chat-heart fs-1"></i></div>
+                            <h3 data-es="Contacto" data-en="Contact">Contacto</h3>
+                            <p data-es="¿Tienes alguna consulta? Nos encantará ayudarte." data-en="Have a question? We will be happy to help.">¿Tienes alguna consulta? Nos encantará ayudarte.</p>
+                            <a href="./contacto.html" class="btn btn-pingui" data-es="Contactarnos" data-en="Contact us">Contactarnos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-pingui">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-3 mb-lg-0">
+                    <div class="footer-brand">
+                        <img src="./assets/logo-pinguino.png" alt="Pingui Store">
+                        <strong>Pingui Store ♥</strong>
+                        <p data-es="Productos con mucho amor" data-en="Products made with lots of love">Productos con mucho amor</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <h6 data-es="ENLACES RÁPIDOS" data-en="QUICK LINKS">ENLACES RÁPIDOS</h6>
+                    <a href="./index.html" data-es="Inicio" data-en="Home">Inicio</a>
+                    <a href="./tienda.html" data-es="Tienda" data-en="Shop">Tienda</a>
+                    <a href="./categorias.html" data-es="Categorías" data-en="Categories">Categorías</a>
+                    <a href="./google-ia.html" data-es="IAs de Google" data-en="Google AI">IAs de Google</a>
+                    <a href="./contacto.html" data-es="Contacto" data-en="Contact">Contacto</a>
+                </div>
+                <div class="col-lg-3 text-lg-end">
+                    <h6 data-es="SÍGUENOS" data-en="FOLLOW US">SÍGUENOS</h6>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js" defer></script>
+</body>
 </html>
